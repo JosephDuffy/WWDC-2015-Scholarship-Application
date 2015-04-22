@@ -18,6 +18,8 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         self.accessibilityLabel = "Joseph Duffy Home"
 
         UIApplication.sharedApplication().statusBarHidden = true
+
+        self.collectionView?.collectionViewLayout.invalidateLayout()
     }
 
     override func prefersStatusBarHidden() -> Bool {
@@ -78,22 +80,31 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         if let section = AppSection(rawValue: indexPath.row) {
             cell.sectionTitleLabel.text = section.name
             cell.backgroundColor = section.mainColor
-            cell.imageView.image = UIImage(named: "Music Icon")
+            
+            let homeIcon = section.homeIcon
+            cell.imageView.image = homeIcon.image
+            if homeIcon.applyAppIconCurve {
+                cell.imageView.layer.masksToBounds = true
+                cell.imageView.layer.cornerRadius = cell.imageView.frame.size.width/5
+            }
+
+            if let textColor = section.textColor {
+                cell.sectionTitleLabel.textColor = textColor
+            }
         }
     
         return cell
     }
 
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-
-        let isLandscape = UIDevice.currentDevice().orientation.isLandscape
+        let isLandscape = self.interfaceOrientation.isLandscape
         let numberOfColumns: CGFloat = isLandscape ? 3 : 2
         let numberOfRows: CGFloat = isLandscape ? 2 : 3
 
-        let viewWidth = self.view.frame.size.width
-        let viewHeight = self.view.frame.size.height
+        let viewWidth = isLandscape ? self.view.frame.size.height : self.view.frame.size.width
+        let viewHeight = isLandscape ? self.view.frame.size.width : self.view.frame.size.height
 
-        return CGSize(width: floor(viewWidth / numberOfColumns), height: floor(viewHeight / numberOfRows))
+        return CGSize(width: viewWidth / numberOfColumns, height: viewHeight / numberOfRows)
     }
 
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
@@ -120,36 +131,5 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
         self.collectionView?.collectionViewLayout.invalidateLayout()
     }
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(collectionView: UICollectionView, shouldHighlightItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(collectionView: UICollectionView, shouldShowMenuForItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(collectionView: UICollectionView, canPerformAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) -> Bool {
-        return false
-    }
-
-    override func collectionView(collectionView: UICollectionView, performAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) {
-    
-    }
-    */
 
 }

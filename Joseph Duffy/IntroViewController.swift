@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IntroViewController: UIViewController {
+class IntroViewController: SectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

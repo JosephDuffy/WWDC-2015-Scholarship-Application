@@ -10,26 +10,29 @@ import UIKit
 
 class SectionViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var scrollView: UIScrollView?
 
-        // Do any additional setup after loading the view.
+    var section: AppSection! {
+        didSet {
+            self.title = self.section.name
+            self.view.backgroundColor = self.section.mainColor
+
+            if let textColor = section.textColor {
+                self.navigationController?.navigationBar.titleTextAttributes = [
+                    NSForegroundColorAttributeName: textColor
+                ]
+            }
+
+            if let barTintColor = section.barTintColor {
+                self.navigationController?.navigationBar.barTintColor = barTintColor
+            }
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        self.scrollView?.flashScrollIndicators()
     }
-    */
 
 }

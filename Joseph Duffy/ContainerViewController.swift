@@ -7,17 +7,12 @@
 //
 
 import UIKit
-import CoreMotion
 
 class ContainerViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var scollView: SectionedScrollView!
     var initialIndex: Int?
 
     private var viewControllers: [UIViewController]?
-
-    // Movement via the accelerometer
-    private var motionManager: CMMotionManager?
-    private var startingAcceleration: CMAcceleration?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,11 +22,11 @@ class ContainerViewController: UIViewController, UIScrollViewDelegate {
             var views = [UIView]()
 
             for section in AppSection.allAppSections {
-                let rootViewController = storyboard.instantiateViewControllerWithIdentifier("SectionRootViewController") as! UINavigationController
-                let contentViewController = rootViewController.viewControllers.first as! UIViewController
+                let storyboardId = section.roorViewControllerStoryboardId
+                let rootViewController = storyboard.instantiateViewControllerWithIdentifier(storyboardId) as! UINavigationController
+                let contentViewController = rootViewController.viewControllers.first as! SectionViewController
 
-                contentViewController.title = section.name
-                contentViewController.view.backgroundColor = section.mainColor
+                contentViewController.section = section
 
                 viewControllers.append(rootViewController)
                 views.append(rootViewController.view)
@@ -44,10 +39,27 @@ class ContainerViewController: UIViewController, UIScrollViewDelegate {
             self.scollView.setup(views)
             self.scollView.delegate = self
 
-            self.scollView.minimumZoomScale = 0.5
+            var minScale = min(self.view.frame.size.width / self.view.frame.size.height, self.view.frame.size.height / self.view.frame.size.width)
+            if minScale > 0.5 {
+                minScale = 1 - minScale
+            }
+            println("Min scale: \(minScale)")
+
+            self.scollView.minimumZoomScale = 0.4
+//            self.scollView.setZoomScale(0.5, animated: false)
 
             UIApplication.sharedApplication().statusBarHidden = true
         }
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+
+//        if self.scollView.zoomScale != 1 {
+//            self.scollView.bounces = true
+//            self.scollView.setZoomScale(1, animated: true)
+//            self.scollView.bounces = false
+//        }
     }
 
     override func prefersStatusBarHidden() -> Bool {
@@ -62,124 +74,43 @@ class ContainerViewController: UIViewController, UIScrollViewDelegate {
         }
     }
 
-    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
-        println("Updating scroll view")
-        self.scollView.needsLayout = true
-        self.scollView.setNeedsLayout()
-        self.scollView.layoutIfNeeded()
-    }
-
-    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
-        println("Updating scroll view")
-        self.scollView.needsLayout = true
-        self.scollView.setNeedsLayout()
-        self.scollView.layoutIfNeeded()
-    }
-
-    private func accelerometerGotNewData(data: CMAccelerometerData!, error: NSError!) {
-        let acceleration = data.acceleration
-
-        let xPercentMoved = acceleration.x * 100
-        println("x %: \(xPercentMoved)")
-
-        self.scollView.moveHorizontally(xPercentMoved)
-    }
-
-    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
-        println("Viewbeing drag")
-
-        self.motionManager?.stopAccelerometerUpdates()
-    }
-
     // MARK: Zooming
-
-    private var performedSegue = false
-    func scrollViewDidZoom(scrollView: UIScrollView) {
-
-
-//        println("Zoomed: \(scrollView.zoomScale)")
-        if !self.performedSegue {
-            if scrollView.zoomScale < 0.4 {
-                println("Popping")
-                // Reset the delegate so the scroll view doesn't capture self and
-                // try and continue sending delegate calls
-                scrollView.delegate = nil
-                self.performedSegue = true
-                self.performSegueWithIdentifier("returnToIntro", sender: self)
-            }
-        }
-    }
 
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
         return scollView.subviews.first as? UIView
+    }
+
+    private var performedSegue = false
+    func scrollViewDidZoom(scrollView: UIScrollView) {
+        // Setting bounces to true allows for the "outside" of the scroll
+        // view to be visible when zooming. When bounces is set to false and
+        // the user zooms, it'll be restricted to the top and left sides
+        scrollView.bounces = true
+
+        if !self.performedSegue {
+            if scrollView.zoomScale < scrollView.minimumZoomScale {
+                self.performUnwindSegue()
+            }
+        }
     }
 
     func scrollViewDidEndZooming(scrollView: UIScrollView, withView view: UIView!, atScale scale: CGFloat) {
         println("Ended zooming")
         if scale > 0.6 {
             scrollView.setZoomScale(1, animated: true)
+            scrollView.bounces = false
         } else {
-            scrollView.delegate = nil
-            self.performedSegue = true
-            self.performSegueWithIdentifier("returnToIntro", sender: self)
+            self.performUnwindSegue()
         }
     }
 
-    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        println("Did end: \(decelerate)")
-
-        if !decelerate {
-            self.motionManager?.startAccelerometerUpdatesToQueue(NSOperationQueue.mainQueue(), withHandler: self.accelerometerGotNewData)
-        }
-    }
-
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-        println("Did end decelerating")
-
-        println((self.scollView.subviews.first as? UIView)?.frame)
-        println((self.scollView.subviews.first as? UIView)?.bounds)
-
-        self.updateScrollViewCenter()
-
-        self.motionManager?.startAccelerometerUpdatesToQueue(NSOperationQueue.mainQueue(), withHandler: self.accelerometerGotNewData)
-    }
-
-    func scrollViewDidEndScrollingAnimation(scrollView: UIScrollView) {
-        println("Did end scrolling")
-
-        println((self.scollView.subviews.first as? UIView)?.frame)
-        println((self.scollView.subviews.first as? UIView)?.bounds)
-
-        self.updateScrollViewCenter()
-
-        self.motionManager?.startAccelerometerUpdatesToQueue(NSOperationQueue.mainQueue(), withHandler: self.accelerometerGotNewData)
-    }
-
-    private func updateScrollViewCenter() {
-        if let subview = self.scollView.subviews.first as? UIView {
-            let pointX = scollView.center.x + scollView.contentOffset.x
-            let pointY = scollView.center.y + scollView.contentOffset.y
-
-            let anchorPoint = CGPoint(x: scollView.frame.height / pointX, y: scollView.frame.width / pointY)
-//            subview.layer.anchorPoint = anchorPoint
-
-            let pinchedCenter = CGPoint(x: scollView.center.x + scollView.contentOffset.x, y: scollView.center.y + scollView.contentOffset.y)
-//            println(pinchedCenter)
-//            subview.layer.anchorPoint = pinchedCenter
-//            subview.center = pinchedCenter
-
-            //            let bounds = scrollView.bounds
-            //            let contentSize = scrollView.contentSize
-            //
-            //            let offsetX = max((bounds.size.width - contentSize.width) * 0.5, 0.0)
-            //            let offsetY = max((bounds.size.height - contentSize.height) * 0.5, 0.0)
-            //
-            //            subview.center = CGPoint(x: contentSize.width * 0.5 + offsetX, y: contentSize.height * 0.5 + offsetY)
-        }
-    }
-
-    deinit {
-        self.motionManager?.stopAccelerometerUpdates()
+    private func performUnwindSegue() {
+        println("Popping")
+        // Reset the delegate so the scroll view doesn't capture self and
+        // try and continue sending delegate calls
+        self.scollView.delegate = nil
+        self.performedSegue = true
+        self.performSegueWithIdentifier("returnToIntro", sender: self)
     }
 
 }

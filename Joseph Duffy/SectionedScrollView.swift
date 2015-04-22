@@ -42,21 +42,6 @@ class SectionedScrollView: UIScrollView, UIScrollViewDelegate {
         self.layoutIfNeeded()
     }
 
-//    func setup(sectionViewControllers: [UIViewController]) {
-//        self.pagingEnabled = true
-//        self.bounces = false
-//        self.showsHorizontalScrollIndicator = false
-//        self.showsVerticalScrollIndicator = false
-//
-//        self.addSubview(self.containerView)
-//
-//        self.sectionViewControllers = sectionViewControllers
-//        self.delegate = self
-//
-//        self.setNeedsLayout()
-//        self.layoutIfNeeded()
-//    }
-
     private var movingHorizontally = false
     private var horizontalStartingX: CGFloat = 0
 
@@ -96,44 +81,35 @@ class SectionedScrollView: UIScrollView, UIScrollViewDelegate {
     }
 
     override func layoutSubviews() {
-
         if let sectionViews = self.sectionViews where self.needsLayout {
-//        if let sectionViewControllers = self.sectionViewControllers where self.needsLayout {
-            let isLandscape = UIDevice.currentDevice().orientation.isLandscape
+            let isLandscape = UIApplication.sharedApplication().statusBarOrientation.isLandscape
 
             let frameWidth = CGRectGetWidth(self.frame)
             let frameHeight = CGRectGetHeight(self.frame)
 
-            println("Landscape: \(isLandscape)")
-
             if sectionViews.count > 2 && isLandscape {
-                self.rows = 3
+                self.columns = 3
             } else if sectionViews.count > 1 {
-                self.rows = 2
+                self.columns = 2
             } else if sectionViews.count > 0 {
-                self.rows = 1
+                self.columns = 1
             } else {
-                self.rows = 0
+                self.columns = 0
             }
 
             if isLandscape {
-                self.columns = Int(ceil(Double(sectionViews.count) / 3.0))
+                self.rows = Int(ceil(Double(sectionViews.count) / 3.0))
             } else {
-                self.columns = Int(ceil(Double(sectionViews.count) / 2.0))
+                self.rows = Int(ceil(Double(sectionViews.count) / 2.0))
             }
 
-            println("Rows: \(self.rows)")
-            println("Columns: \(self.columns)")
-
-            let size = CGSize(width: frameWidth * CGFloat(self.rows), height: frameHeight * CGFloat(self.columns))
+            let size = CGSize(width: frameWidth * CGFloat(self.columns), height: frameHeight * CGFloat(self.rows))
             self.containerView.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: size)
             self.contentSize = size
 
-            println("Size: \(size)")
-
             for (index, sectionView) in enumerate(sectionViews) {
-                let xMultiplier: CGFloat = CGFloat(index % self.rows)
-                let yMultiplier: CGFloat = CGFloat(floor(Double(index) / Double(self.rows)))
+                let xMultiplier: CGFloat = CGFloat(index % self.columns)
+                let yMultiplier: CGFloat = CGFloat(floor(Double(index) / Double(self.columns)))
 
                 let sectionViewFrame = CGRect(x: frameWidth * xMultiplier, y: frameHeight * yMultiplier, width: self.frame.size.width, height: self.frame.size.height)
                 sectionView.frame = sectionViewFrame
@@ -143,10 +119,38 @@ class SectionedScrollView: UIScrollView, UIScrollViewDelegate {
 
             if let initialIndex = self.initialIndex {
                 let offset = self.offsetForIndex(initialIndex)
-                println("Offset: \(offset)")
-
                 self.contentOffset = offset
+
+                // Enable bounces so the zoom will go outside of the overall view
+//                self.bounces = true
+//                self.bouncesZoom = false
+
+//                self.setZoomScale(self.minimumZoomScale, animated: false)
+//                println(self.contentOffset)
+//                self.setZoomScale(1, animated: true)
+
+//                self.transform = CGAffineTransformMakeScale(self.minimumZoomScale, self.minimumZoomScale)
+//
+//                UIView.animateWithDuration(1, animations: { () -> Void in
+//                    self.transform = CGAffineTransformIdentity
+//                })
             }
+
+//            if self.zoomScale != 1 {
+//                let zoomScale = self.zoomScale
+//                self.setZoomScale(1, animated: false)
+//                self.bounces = true
+//
+//                if let initialIndex = self.initialIndex {
+//                    self.contentOffset = self.offsetForIndex(initialIndex)
+//                }
+//                println(self.contentOffset)
+////                self.contentOffset = CGPoint(x: self.contentOffset.x - (frameWidth * zoomScale), y: self.contentOffset.y - (frameHeight * zoomScale))
+////                println(self.contentOffset)
+//                self.setZoomScale(zoomScale, animated: false)
+//                self.setZoomScale(1, animated: true)
+////                self.bounces = false
+//            }
 
             self.needsLayout = false
         }
@@ -156,16 +160,9 @@ class SectionedScrollView: UIScrollView, UIScrollViewDelegate {
         let frameWidth = CGRectGetWidth(self.frame)
         let frameHeight = CGRectGetHeight(self.frame)
 
-        println("Index: \(index)")
-        println(self.frame)
-
         let indexAsDouble = Double(index)
 
-        return CGPoint(x: frameWidth * CGFloat(index % self.rows), y: frameHeight * CGFloat(floor(Double(index) / Double(self.rows))))
+        return CGPoint(x: frameWidth * CGFloat(index % self.columns), y: frameHeight * CGFloat(floor(Double(index) / Double(self.columns))))
     }
-
-//    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
-//        return self
-//    }
 
 }
