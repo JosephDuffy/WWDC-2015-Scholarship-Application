@@ -79,6 +79,15 @@ enum AppSection: Int {
         }
     }
 
+    var tintColor: UIColor? {
+        switch self {
+        case .Accessiblity:
+            return UIColor(red: 0.42, green: 0.714, blue: 1, alpha: 1)
+        default:
+            return nil
+        }
+    }
+
     var homeIcon: (image: UIImage?, applyAppIconCurve: Bool) {
         get {
             var homeIcon: (image: UIImage?, applyAppIconCurve: Bool) = (nil, false)
@@ -108,7 +117,7 @@ enum AppSection: Int {
         get {
             switch self {
             case .About:
-                return "IntroRootViewController"
+                return "AboutMeRootViewController"
             case .Work:
                 return "WorkRootViewController"
             case .Gathered:

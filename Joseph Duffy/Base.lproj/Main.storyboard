@@ -4,7 +4,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -29,7 +28,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Asc-ix-MHX">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.70000000000000018" translatesAutoresizingMaskIntoConstraints="NO" id="Asc-ix-MHX">
                                             <rect key="frame" x="8" y="8" width="134" height="20"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -141,150 +140,6 @@
             </objects>
             <point key="canvasLocation" x="-18" y="621"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="r3N-bJ-zO5">
-            <objects>
-                <navigationController storyboardIdentifier="IntroRootViewController" id="9Te-WO-awb" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jLv-tA-rgp">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="kwj-sY-Ozw" kind="relationship" relationship="rootViewController" id="zUY-1y-RRt"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0ke-hb-Ges" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="666" y="446"/>
-        </scene>
-        <!--Intro-->
-        <scene sceneID="7FC-0e-EKt">
-            <objects>
-                <viewController id="kwj-sY-Ozw" customClass="IntroViewController" customModule="Joseph_Duffy" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="SBj-JM-sdu"/>
-                        <viewControllerLayoutGuide type="bottom" id="cpi-O3-mKc"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="HRK-Zo-wTT">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xtC-z6-BPT">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo of Me.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="w79-8q-eOJ">
-                                        <rect key="frame" x="172" y="20" width="256" height="256"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="w79-8q-eOJ" secondAttribute="height" id="BgM-bR-yKs"/>
-                                            <constraint firstAttribute="width" constant="256" id="Ion-fX-PWc"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Trl-yx-3Nt">
-                                        <rect key="frame" x="20" y="312" width="560" height="62"/>
-                                        <string key="text">Hi, I'm Joseph Duffy, a 21-year-old budding software engineering from England. I have been working with Apple technologies for 5 years and been focussed on iOS for 2 years.</string>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where I Started" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8C-HZ-m84">
-                                        <rect key="frame" x="20" y="382" width="560" height="20"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddQ-7q-ynl">
-                                        <rect key="frame" x="20" y="410" width="560" height="125"/>
-                                        <string key="text">My very first program (it was really just a script) was created to try and avoid the long download times for extra textures when connecting a Counter Strike: Source server I rented with some friends. The program was very simple, and only unzipped and moved some files to a specific director on the user's computer. It wasn't much, and was only really used by me and my friends, but it started my love for creating things that solve problems.</string>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Web Localiser" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4O-0R-JzR">
-                                        <rect key="frame" x="20" y="543" width="560" height="20"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93I-p2-vlj">
-                                        <rect key="frame" x="20" y="571" width="560" height="122"/>
-                                        <string key="text">Web Localiser was my first publicly-released piece of software. Web Localiser provided a button in Safari's toolbar to quickly switch between TLDs, such as .com and .co.uk. It wasn't huge, but it got a substantial nubmer of downloads and gave me a taste of what it's like to release software that genuinly helped people. The best feeling was getting an email from someone that was thanking me for creating Web Localiser.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fsz-71-0pI">
-                                        <rect key="frame" x="20" y="284" width="560" height="20"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="Fsz-71-0pI" firstAttribute="leading" secondItem="xtC-z6-BPT" secondAttribute="leading" constant="20" id="2be-8o-ESM"/>
-                                    <constraint firstItem="Trl-yx-3Nt" firstAttribute="leading" secondItem="xtC-z6-BPT" secondAttribute="leading" constant="20" id="44l-QK-pGe"/>
-                                    <constraint firstItem="Trl-yx-3Nt" firstAttribute="width" secondItem="ddQ-7q-ynl" secondAttribute="width" id="6De-8x-eFk"/>
-                                    <constraint firstItem="93I-p2-vlj" firstAttribute="top" secondItem="a4O-0R-JzR" secondAttribute="bottom" constant="8" symbolic="YES" id="8bX-6O-IBf"/>
-                                    <constraint firstItem="ddQ-7q-ynl" firstAttribute="leading" secondItem="xtC-z6-BPT" secondAttribute="leading" constant="20" symbolic="YES" id="8pn-pK-aKm"/>
-                                    <constraint firstItem="O8C-HZ-m84" firstAttribute="top" secondItem="Trl-yx-3Nt" secondAttribute="bottom" constant="8" symbolic="YES" id="8qy-OK-Afc"/>
-                                    <constraint firstItem="Trl-yx-3Nt" firstAttribute="top" secondItem="Fsz-71-0pI" secondAttribute="bottom" constant="8" symbolic="YES" id="9Gf-15-0a2"/>
-                                    <constraint firstItem="O8C-HZ-m84" firstAttribute="leading" secondItem="xtC-z6-BPT" secondAttribute="leading" constant="20" id="9Zz-gp-E5V"/>
-                                    <constraint firstAttribute="trailing" secondItem="ddQ-7q-ynl" secondAttribute="trailing" constant="20" symbolic="YES" id="AsF-8I-usY"/>
-                                    <constraint firstItem="w79-8q-eOJ" firstAttribute="top" secondItem="xtC-z6-BPT" secondAttribute="top" constant="20" symbolic="YES" id="AtL-z4-2oO"/>
-                                    <constraint firstAttribute="bottom" secondItem="93I-p2-vlj" secondAttribute="bottom" constant="20" symbolic="YES" id="Jn9-b8-OGF"/>
-                                    <constraint firstAttribute="trailing" secondItem="93I-p2-vlj" secondAttribute="trailing" constant="20" symbolic="YES" id="Ovv-TC-fTb"/>
-                                    <constraint firstAttribute="centerX" secondItem="w79-8q-eOJ" secondAttribute="centerX" id="RhW-Vk-T9x"/>
-                                    <constraint firstAttribute="trailing" secondItem="Trl-yx-3Nt" secondAttribute="trailing" constant="20" id="SYn-vF-6m5"/>
-                                    <constraint firstAttribute="trailing" secondItem="a4O-0R-JzR" secondAttribute="trailing" constant="20" symbolic="YES" id="Twa-xl-QrG"/>
-                                    <constraint firstAttribute="trailing" secondItem="O8C-HZ-m84" secondAttribute="trailing" constant="16" id="Weu-yL-zRI"/>
-                                    <constraint firstAttribute="trailing" secondItem="Fsz-71-0pI" secondAttribute="trailing" constant="16" id="XJp-zy-VuV"/>
-                                    <constraint firstItem="93I-p2-vlj" firstAttribute="leading" secondItem="xtC-z6-BPT" secondAttribute="leading" constant="20" symbolic="YES" id="bbA-8C-esF"/>
-                                    <constraint firstItem="93I-p2-vlj" firstAttribute="width" secondItem="Trl-yx-3Nt" secondAttribute="width" id="euy-Rl-cbu"/>
-                                    <constraint firstItem="Trl-yx-3Nt" firstAttribute="width" secondItem="O8C-HZ-m84" secondAttribute="width" id="jD1-ZX-ZdK"/>
-                                    <constraint firstItem="a4O-0R-JzR" firstAttribute="leading" secondItem="xtC-z6-BPT" secondAttribute="leading" constant="20" symbolic="YES" id="n2M-7E-UZa"/>
-                                    <constraint firstItem="Trl-yx-3Nt" firstAttribute="width" secondItem="Fsz-71-0pI" secondAttribute="width" id="oKS-wq-Zqv"/>
-                                    <constraint firstItem="a4O-0R-JzR" firstAttribute="top" secondItem="ddQ-7q-ynl" secondAttribute="bottom" constant="8" symbolic="YES" id="op8-XX-blT"/>
-                                    <constraint firstItem="Fsz-71-0pI" firstAttribute="top" secondItem="w79-8q-eOJ" secondAttribute="bottom" constant="8" symbolic="YES" id="qOh-Yc-OAJ"/>
-                                    <constraint firstItem="a4O-0R-JzR" firstAttribute="width" secondItem="Trl-yx-3Nt" secondAttribute="width" id="s43-uj-e1Z"/>
-                                    <constraint firstItem="ddQ-7q-ynl" firstAttribute="top" secondItem="O8C-HZ-m84" secondAttribute="bottom" constant="8" symbolic="YES" id="xvc-e7-a3E"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="XJp-zy-VuV"/>
-                                        <exclude reference="Weu-yL-zRI"/>
-                                        <exclude reference="AsF-8I-usY"/>
-                                        <exclude reference="Twa-xl-QrG"/>
-                                        <exclude reference="Ovv-TC-fTb"/>
-                                    </mask>
-                                </variation>
-                            </scrollView>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="xtC-z6-BPT" firstAttribute="top" secondItem="SBj-JM-sdu" secondAttribute="bottom" id="BBd-VO-zXL"/>
-                            <constraint firstItem="xtC-z6-BPT" firstAttribute="top" secondItem="HRK-Zo-wTT" secondAttribute="topMargin" id="JkD-Ql-P4m"/>
-                            <constraint firstAttribute="trailing" secondItem="xtC-z6-BPT" secondAttribute="trailing" id="MCq-Vf-tzF"/>
-                            <constraint firstItem="xtC-z6-BPT" firstAttribute="leading" secondItem="HRK-Zo-wTT" secondAttribute="leading" id="TSl-Zs-ypC"/>
-                            <constraint firstItem="cpi-O3-mKc" firstAttribute="top" secondItem="xtC-z6-BPT" secondAttribute="bottom" id="jb9-9K-NE1"/>
-                            <constraint firstItem="xtC-z6-BPT" firstAttribute="bottom" secondItem="HRK-Zo-wTT" secondAttribute="bottomMargin" id="sRC-J4-sX5"/>
-                            <constraint firstItem="Trl-yx-3Nt" firstAttribute="width" secondItem="HRK-Zo-wTT" secondAttribute="width" constant="-40" id="wSZ-Hh-Ih1"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="BBd-VO-zXL"/>
-                                <exclude reference="jb9-9K-NE1"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <navigationItem key="navigationItem" title="Intro" id="mht-51-h4f"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="800"/>
-                    <connections>
-                        <outlet property="scrollView" destination="xtC-z6-BPT" id="hld-wq-iTm"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1WQ-g6-XZv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1471" y="446"/>
-        </scene>
         <!--Work and Education-->
         <scene sceneID="Oft-tR-ZIu">
             <objects>
@@ -381,6 +236,11 @@ Curro is an activity monitor, aimed at making it easier for spectators, charitie
                     <size key="freeformSize" width="600" height="900"/>
                     <connections>
                         <outlet property="scrollView" destination="cos-kx-YeL" id="YdD-RJ-few"/>
+                        <outletCollection property="labels" destination="eGl-CX-PEM" collectionClass="NSMutableArray" id="Ltf-Ch-tG5"/>
+                        <outletCollection property="labels" destination="3lU-B5-eTD" collectionClass="NSMutableArray" id="1ST-Jl-1Pa"/>
+                        <outletCollection property="labels" destination="P8N-G3-AUj" collectionClass="NSMutableArray" id="DRo-IZ-ZSE"/>
+                        <outletCollection property="labels" destination="vtb-mP-zjy" collectionClass="NSMutableArray" id="sGS-rK-Yvo"/>
+                        <outletCollection property="labels" destination="4bk-wd-JwB" collectionClass="NSMutableArray" id="FjN-k8-sm0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XZj-Ph-EYT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -440,6 +300,7 @@ Curro is an activity monitor, aimed at making it easier for spectators, charitie
                     <connections>
                         <outlet property="appIconImageView" destination="4iO-5Q-0Wf" id="5tL-DO-uXA"/>
                         <outlet property="scrollView" destination="kle-gu-2aX" id="2eG-lR-5Bg"/>
+                        <outletCollection property="labels" destination="zH3-es-OnX" collectionClass="NSMutableArray" id="SMI-sV-YXk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZY0-T2-F8p" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -455,11 +316,11 @@ Curro is an activity monitor, aimed at making it easier for spectators, charitie
                         <viewControllerLayoutGuide type="bottom" id="B6y-Iw-Lnz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CuE-99-shF">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Fr-mC-Pzr">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="900"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gathered App Icon" translatesAutoresizingMaskIntoConstraints="NO" id="X3p-kD-m9g">
                                         <rect key="frame" x="172" y="20" width="256" height="256"/>
@@ -469,23 +330,38 @@ Curro is an activity monitor, aimed at making it easier for spectators, charitie
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYc-ob-cB1">
-                                        <rect key="frame" x="20" y="284" width="560" height="179"/>
+                                        <rect key="frame" x="20" y="284" width="560" height="188"/>
                                         <string key="text">Gathered is the first iOS app I have released. Gathered aggregates various data sources from the iOS device and presents them to the user.
 
 The aim of Gathered was to see an app all the way through: from creating a new Xcode project to releasing it on the App Store. I feel Gathered was the perfect app to do this, because along the way I learned a lot of new APIs, created an open-source UITableView-based framework and fully got to grips with Swift. Despite the number of downloads not being that impressive, I am very proud of what I have accomplished.</string>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Performance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S01-zu-WxB">
-                                        <rect key="frame" x="20" y="471" width="560" height="20"/>
+                                        <rect key="frame" x="20" y="480" width="560" height="20"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57a-Hy-3fU">
-                                        <rect key="frame" x="20" y="499" width="560" height="104"/>
+                                        <rect key="frame" x="20" y="508" width="560" height="104"/>
                                         <string key="text">Due to Gathered's nature, ensuring the code is efficient and easy to debug was integral to its success. Due to this I learned a lot about the performance of UITableViews, how they calculate their cell's heights and how to pass a high volume of messages. This was a brilliant oppotunity to learn how to use Instruments, so I did.</string>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accessibility" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xc8-mr-O3Q">
+                                        <rect key="frame" x="20" y="620" width="560" height="20"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DoZ-7k-FJJ">
+                                        <rect key="frame" x="20" y="648" width="560" height="209"/>
+                                        <mutableString key="text">Although Gathered does not lend itself well to being used with VoiceOver enabled due to its high update frequency, I was able to research and implement Dynamic Type within Gathered. This research and work implementing is what eventually led to the Dynamic Controls framework I have since released, which brings automatic support for Dynamic Type to iOS 7.
+
+For the next version of Gathered I have been looking in to making the app more VoiceOver friendly, such as adding an option to refresh manually, and using the Magic Tap gesture to perform that refresh.</mutableString>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -494,17 +370,31 @@ The aim of Gathered was to see an app all the way through: from creating a new X
                                 <constraints>
                                     <constraint firstItem="X3p-kD-m9g" firstAttribute="top" secondItem="4Fr-mC-Pzr" secondAttribute="top" constant="20" symbolic="YES" id="15o-Ez-Jbt"/>
                                     <constraint firstItem="57a-Hy-3fU" firstAttribute="top" secondItem="S01-zu-WxB" secondAttribute="bottom" constant="8" symbolic="YES" id="34W-fr-afb"/>
+                                    <constraint firstAttribute="bottom" secondItem="DoZ-7k-FJJ" secondAttribute="bottom" constant="20" symbolic="YES" id="CCp-cV-FMG"/>
                                     <constraint firstAttribute="centerX" secondItem="X3p-kD-m9g" secondAttribute="centerX" id="Eov-6v-ykM"/>
+                                    <constraint firstAttribute="trailing" secondItem="S01-zu-WxB" secondAttribute="trailing" constant="20" symbolic="YES" id="Epe-lv-FnB"/>
                                     <constraint firstItem="CYc-ob-cB1" firstAttribute="leading" secondItem="4Fr-mC-Pzr" secondAttribute="leading" constant="20" symbolic="YES" id="GCE-Ec-lqg"/>
+                                    <constraint firstItem="DoZ-7k-FJJ" firstAttribute="leading" secondItem="4Fr-mC-Pzr" secondAttribute="leading" constant="20" symbolic="YES" id="HDo-Hv-LEf"/>
                                     <constraint firstItem="57a-Hy-3fU" firstAttribute="width" secondItem="CYc-ob-cB1" secondAttribute="width" id="Joh-Sr-Npr"/>
+                                    <constraint firstAttribute="trailing" secondItem="DoZ-7k-FJJ" secondAttribute="trailing" constant="20" symbolic="YES" id="MuY-ty-eF9"/>
+                                    <constraint firstItem="Xc8-mr-O3Q" firstAttribute="leading" secondItem="4Fr-mC-Pzr" secondAttribute="leading" constant="20" symbolic="YES" id="PgE-Dp-7nA"/>
                                     <constraint firstItem="S01-zu-WxB" firstAttribute="top" secondItem="CYc-ob-cB1" secondAttribute="bottom" constant="8" symbolic="YES" id="SEU-Lu-PPo"/>
-                                    <constraint firstAttribute="bottom" secondItem="57a-Hy-3fU" secondAttribute="bottom" constant="20" symbolic="YES" id="ZHF-Fs-y5H"/>
                                     <constraint firstItem="CYc-ob-cB1" firstAttribute="top" secondItem="X3p-kD-m9g" secondAttribute="bottom" constant="8" symbolic="YES" id="bxJ-e6-HjI"/>
+                                    <constraint firstAttribute="trailing" secondItem="57a-Hy-3fU" secondAttribute="trailing" constant="20" symbolic="YES" id="dwW-s1-0lk"/>
                                     <constraint firstItem="57a-Hy-3fU" firstAttribute="leading" secondItem="4Fr-mC-Pzr" secondAttribute="leading" constant="20" symbolic="YES" id="gzD-CE-0O6"/>
                                     <constraint firstItem="S01-zu-WxB" firstAttribute="leading" secondItem="4Fr-mC-Pzr" secondAttribute="leading" constant="20" symbolic="YES" id="hBg-TD-nCF"/>
+                                    <constraint firstItem="DoZ-7k-FJJ" firstAttribute="top" secondItem="Xc8-mr-O3Q" secondAttribute="bottom" constant="8" symbolic="YES" id="ir0-zS-kLg"/>
                                     <constraint firstItem="S01-zu-WxB" firstAttribute="width" secondItem="CYc-ob-cB1" secondAttribute="width" id="l3G-BM-dCX"/>
+                                    <constraint firstItem="Xc8-mr-O3Q" firstAttribute="top" secondItem="57a-Hy-3fU" secondAttribute="bottom" constant="8" symbolic="YES" id="uGi-6e-fZi"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xc8-mr-O3Q" secondAttribute="trailing" constant="20" symbolic="YES" id="vyY-aY-nYL"/>
                                     <constraint firstAttribute="trailing" secondItem="CYc-ob-cB1" secondAttribute="trailing" constant="20" symbolic="YES" id="xj2-3i-Zqk"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="l3G-BM-dCX"/>
+                                        <exclude reference="Joh-Sr-Npr"/>
+                                    </mask>
+                                </variation>
                             </scrollView>
                         </subviews>
                         <constraints>
@@ -517,10 +407,15 @@ The aim of Gathered was to see an app all the way through: from creating a new X
                     </view>
                     <navigationItem key="navigationItem" title="Gathered" id="vKy-dM-DLt"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="800"/>
+                    <size key="freeformSize" width="600" height="900"/>
                     <connections>
                         <outlet property="appIconImageView" destination="X3p-kD-m9g" id="Iuw-4l-BHb"/>
                         <outlet property="scrollView" destination="4Fr-mC-Pzr" id="rGR-zv-Y9h"/>
+                        <outletCollection property="labels" destination="CYc-ob-cB1" collectionClass="NSMutableArray" id="o2A-ZS-WrC"/>
+                        <outletCollection property="labels" destination="S01-zu-WxB" collectionClass="NSMutableArray" id="4rS-6r-iyd"/>
+                        <outletCollection property="labels" destination="57a-Hy-3fU" collectionClass="NSMutableArray" id="ccQ-BF-RM8"/>
+                        <outletCollection property="labels" destination="Xc8-mr-O3Q" collectionClass="NSMutableArray" id="KoQ-en-WF2"/>
+                        <outletCollection property="labels" destination="DoZ-7k-FJJ" collectionClass="NSMutableArray" id="Ohy-E7-jsr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oZt-aA-KbN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -597,9 +492,9 @@ I also love to build things that aren't programs, such as electronics. Last year
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSn-6N-fOe">
                                         <rect key="frame" x="20" y="455" width="560" height="188"/>
-                                        <mutableString key="text">In a similar way to how I like to solves programing problems, creating electronics is another passion of mine. When I started my record collection I decided to also build my own amplifiers that would be used to listen to them. So far, I have built a power amp, pre-amp and I am in the process of building my final amplifier: a phono amp.
+                                        <string key="text">In a similar way to how I like to solves programing problems, creating electronics is another passion of mine. When I started my record collection I decided to also build my own amplifiers that would be used to listen to them. So far, I have built a power amp, pre-amp and I am in the process of building my final amplifier: a phono amp.
 
-Once I have finished building my final amplifier I am hoping to look in to building some smaller electronics, aimed at home automation, specifically for those living with a disability.</mutableString>
+Once I have finished building my final amplifier I am hoping to look in to building some smaller electronics, aimed at home automation, specifically for those living with a disability.</string>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -617,7 +512,7 @@ Once I have finished building my final amplifier I am hoping to look in to build
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Panarama of the Humber Bridge" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQ3-u3-LIb">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Panarama including the Humber Bridge, near where I live" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQ3-u3-LIb">
                                         <rect key="frame" x="20" y="940" width="560" height="14"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -694,6 +589,15 @@ Once I have finished building my final amplifier I am hoping to look in to build
                     <size key="freeformSize" width="600" height="1400"/>
                     <connections>
                         <outlet property="scrollView" destination="aBI-XJ-Zgd" id="J4h-DP-Gp7"/>
+                        <outletCollection property="labels" destination="O3x-rr-vVh" collectionClass="NSMutableArray" id="Va3-ge-KO0"/>
+                        <outletCollection property="labels" destination="dzU-Ic-S7S" collectionClass="NSMutableArray" id="o5y-b8-5OS"/>
+                        <outletCollection property="labels" destination="b5Y-nm-M56" collectionClass="NSMutableArray" id="OBp-ww-1dy"/>
+                        <outletCollection property="labels" destination="i0K-ZT-d8K" collectionClass="NSMutableArray" id="2tC-ik-pHL"/>
+                        <outletCollection property="labels" destination="HDj-ik-oPb" collectionClass="NSMutableArray" id="EzW-34-4Uu"/>
+                        <outletCollection property="labels" destination="YSn-6N-fOe" collectionClass="NSMutableArray" id="J2w-h8-XaO"/>
+                        <outletCollection property="labels" destination="TWB-la-4Jm" collectionClass="NSMutableArray" id="McD-dv-RMf"/>
+                        <outletCollection property="labels" destination="BGU-ia-RVn" collectionClass="NSMutableArray" id="OBX-34-gsS"/>
+                        <outletCollection property="labels" destination="VQ3-u3-LIb" collectionClass="NSMutableArray" id="qpV-NR-OD9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fOv-qN-0Hn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -775,30 +679,127 @@ Once I have finished building my final amplifier I am hoping to look in to build
         <!--Accessiblity-->
         <scene sceneID="JUS-Od-Gxt">
             <objects>
-                <viewController id="QU8-eE-GW9" customClass="SectionViewController" customModule="Joseph_Duffy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QU8-eE-GW9" customClass="AccessibilitySectionViewController" customModule="Joseph_Duffy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="T8Z-ho-cVP"/>
                         <viewControllerLayoutGuide type="bottom" id="kOS-UH-qgF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KUn-ak-uZg">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TKZ-Zk-vVq">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPA-y9-yOE">
+                                        <rect key="frame" x="20" y="20" width="560" height="230"/>
+                                        <string key="text">The most satisfying thing about creating software for me is when it helps someone. It could be something really simple, but when I've received messages from people using what I've created, thanking me for doing so, I am so grateful that they took the time to do so, and cherish those messages dearly. As part of this, whenever I create software I try to think about what problems it could solve and who might benefit from it.
+
+As part of my efforts to ensure that my software is helpful I have spent a lot of time researching and implementing proper accessibility standards.2 good examples of this are my open-source iOS framework, Dynamic Controls, and a project I worked at Clever4: a timetable for the local bus company.</string>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Dynamic Controls" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reZ-fz-wBm">
+                                        <rect key="frame" x="20" y="263" width="445" height="20"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nm-AB-bN3">
+                                        <rect key="frame" x="20" y="296" width="560" height="230"/>
+                                        <string key="text">Dynamic Controls is an open-source framework ofr iOS 7.0+, written entirely in Swift. It aims to provide drop-in replacements for some of UIKit's classes, adding automatic support for Dynamic Type on iOS 7, and Auto Layout support within UITableViews to ensure the layout is correct when using Dynamic Type.
+
+The project is far from perfect, but I am continuing development, and both of my personal apps have shipped using it.
+
+While creating Dynamic Controls I ahve learned a lot about the accessiblity features of iOS, especially VoiceOver.</string>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7K-kG-6Iy">
+                                        <rect key="frame" x="473" y="258" width="107" height="30"/>
+                                        <state key="normal" title="View on GitHub">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="viewDynamicControlsOnGitHubButtonTapped" destination="QU8-eE-GW9" eventType="touchUpInside" id="ojj-3F-kdx"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="EYMS Timetable" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xso-c6-lY2">
+                                        <rect key="frame" x="20" y="539" width="456" height="20"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSY-Fu-wKU">
+                                        <rect key="frame" x="484" y="534" width="96" height="30"/>
+                                        <state key="normal" title="View Example">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="viewEYMSTimetableExampleButtonTapped" destination="QU8-eE-GW9" eventType="touchUpInside" id="yIK-Oc-LKO"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syr-wQ-1My">
+                                        <rect key="frame" x="20" y="572" width="560" height="209"/>
+                                        <string key="text">A great example of this was when I created a timetable for the local bus company's website. We had no control over the output HTML, but did have the option to use JavaScript to modify the DOM after the page had loaded. We had 3 targets to meet:
+
+• Be responsive
+• Work with screenreaders
+• Work on older mobiles without being sluggish
+
+Hitting all of these targets was no easy feat,</string>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="w7K-kG-6Iy" firstAttribute="top" secondItem="gPA-y9-yOE" secondAttribute="bottom" constant="8" symbolic="YES" id="1Kv-O2-hpM"/>
+                                    <constraint firstItem="jSY-Fu-wKU" firstAttribute="leading" secondItem="Xso-c6-lY2" secondAttribute="trailing" constant="8" symbolic="YES" id="5Ub-vn-BDr"/>
+                                    <constraint firstAttribute="trailing" secondItem="w7K-kG-6Iy" secondAttribute="trailing" constant="20" symbolic="YES" id="6Wg-XN-6Dn"/>
+                                    <constraint firstAttribute="trailing" secondItem="gPA-y9-yOE" secondAttribute="trailing" constant="20" symbolic="YES" id="DqJ-DV-pE5"/>
+                                    <constraint firstItem="reZ-fz-wBm" firstAttribute="centerY" secondItem="w7K-kG-6Iy" secondAttribute="centerY" id="EeY-4S-gf3"/>
+                                    <constraint firstItem="reZ-fz-wBm" firstAttribute="leading" secondItem="TKZ-Zk-vVq" secondAttribute="leading" constant="20" symbolic="YES" id="H32-U1-6ec"/>
+                                    <constraint firstItem="gPA-y9-yOE" firstAttribute="leading" secondItem="TKZ-Zk-vVq" secondAttribute="leading" constant="20" symbolic="YES" id="NOy-bd-ywJ"/>
+                                    <constraint firstItem="syr-wQ-1My" firstAttribute="leading" secondItem="TKZ-Zk-vVq" secondAttribute="leading" constant="20" symbolic="YES" id="Ne4-1c-Gvc"/>
+                                    <constraint firstAttribute="trailing" secondItem="jSY-Fu-wKU" secondAttribute="trailing" constant="20" symbolic="YES" id="Pl7-VX-RBT"/>
+                                    <constraint firstItem="Xso-c6-lY2" firstAttribute="centerY" secondItem="jSY-Fu-wKU" secondAttribute="centerY" id="TCH-EJ-sfJ"/>
+                                    <constraint firstItem="jSY-Fu-wKU" firstAttribute="top" secondItem="8nm-AB-bN3" secondAttribute="bottom" constant="8" symbolic="YES" id="U4Z-7c-X7b"/>
+                                    <constraint firstAttribute="bottom" secondItem="syr-wQ-1My" secondAttribute="bottom" constant="20" symbolic="YES" id="cub-vX-53m"/>
+                                    <constraint firstItem="8nm-AB-bN3" firstAttribute="leading" secondItem="TKZ-Zk-vVq" secondAttribute="leading" constant="20" symbolic="YES" id="czN-f7-zGI"/>
+                                    <constraint firstItem="gPA-y9-yOE" firstAttribute="top" secondItem="TKZ-Zk-vVq" secondAttribute="top" constant="20" symbolic="YES" id="gtf-rD-6nZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="8nm-AB-bN3" secondAttribute="trailing" constant="20" symbolic="YES" id="h9W-nc-p9F"/>
+                                    <constraint firstItem="8nm-AB-bN3" firstAttribute="top" secondItem="w7K-kG-6Iy" secondAttribute="bottom" constant="8" symbolic="YES" id="i3M-gr-0oO"/>
+                                    <constraint firstItem="syr-wQ-1My" firstAttribute="top" secondItem="jSY-Fu-wKU" secondAttribute="bottom" constant="8" symbolic="YES" id="lGt-vV-42S"/>
+                                    <constraint firstAttribute="trailing" secondItem="syr-wQ-1My" secondAttribute="trailing" constant="20" symbolic="YES" id="m23-1Z-lhr"/>
+                                    <constraint firstItem="Xso-c6-lY2" firstAttribute="leading" secondItem="TKZ-Zk-vVq" secondAttribute="leading" constant="20" symbolic="YES" id="oDG-z6-iOo"/>
+                                    <constraint firstItem="w7K-kG-6Iy" firstAttribute="leading" secondItem="reZ-fz-wBm" secondAttribute="trailing" constant="8" symbolic="YES" id="pMM-Jc-fbL"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="kOS-UH-qgF" firstAttribute="top" secondItem="TKZ-Zk-vVq" secondAttribute="bottom" id="0hm-Zd-0OI"/>
+                            <constraint firstItem="gPA-y9-yOE" firstAttribute="width" secondItem="KUn-ak-uZg" secondAttribute="width" constant="-40" id="AEP-vu-abs"/>
                             <constraint firstItem="TKZ-Zk-vVq" firstAttribute="top" secondItem="KUn-ak-uZg" secondAttribute="top" id="Npn-yn-3PR"/>
                             <constraint firstItem="TKZ-Zk-vVq" firstAttribute="leading" secondItem="KUn-ak-uZg" secondAttribute="leading" id="WXo-v5-FJv"/>
                             <constraint firstAttribute="trailing" secondItem="TKZ-Zk-vVq" secondAttribute="trailing" id="rXS-ef-xuO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Accessiblity" id="FhQ-dB-Y73"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="800"/>
                     <connections>
                         <outlet property="scrollView" destination="TKZ-Zk-vVq" id="bJj-i2-zCg"/>
+                        <outletCollection property="labels" destination="gPA-y9-yOE" collectionClass="NSMutableArray" id="WH0-vg-unt"/>
+                        <outletCollection property="labels" destination="reZ-fz-wBm" collectionClass="NSMutableArray" id="xM2-9u-NzA"/>
+                        <outletCollection property="labels" destination="8nm-AB-bN3" collectionClass="NSMutableArray" id="2fL-Bb-XkS"/>
+                        <outletCollection property="labels" destination="Xso-c6-lY2" collectionClass="NSMutableArray" id="Tv7-2Z-zKR"/>
+                        <outletCollection property="labels" destination="syr-wQ-1My" collectionClass="NSMutableArray" id="V7e-oT-9cp"/>
+                        <outletCollection property="buttons" destination="w7K-kG-6Iy" collectionClass="NSMutableArray" id="55p-HU-UD2"/>
+                        <outletCollection property="buttons" destination="jSY-Fu-wKU" collectionClass="NSMutableArray" id="i00-Wo-SfZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y0O-Sa-7aY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -822,6 +823,134 @@ Once I have finished building my final amplifier I am hoping to look in to build
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wrG-5h-joM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2310" y="2206"/>
+        </scene>
+        <!--About Me-->
+        <scene sceneID="EvZ-Rg-HI1">
+            <objects>
+                <viewController id="69C-8Q-DS9" customClass="SectionViewController" customModule="Joseph_Duffy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nFw-SU-llh"/>
+                        <viewControllerLayoutGuide type="bottom" id="sOw-zk-Nvf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="deA-Bc-g0a">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fRL-Bk-GiU">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo of Me.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="8Lh-Ss-01H">
+                                        <rect key="frame" x="172" y="20" width="256" height="256"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="8Lh-Ss-01H" secondAttribute="height" multiplier="1:1" id="09a-4T-dhM"/>
+                                            <constraint firstAttribute="width" constant="256" id="MIC-2s-gyv"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giy-5P-66E">
+                                        <rect key="frame" x="20" y="284" width="560" height="62"/>
+                                        <string key="text">Hi, I'm Joseph Duffy, a 21-year-old budding software engineering from England. I have been working with Apple technologies for 5 years and been focussed on iOS for 2 years.</string>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where I Started" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UqQ-n0-nnw">
+                                        <rect key="frame" x="20" y="354" width="560" height="20"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqs-qH-AVO">
+                                        <rect key="frame" x="20" y="382" width="560" height="125"/>
+                                        <string key="text">My very first program (it was really just a script) was created to try and avoid the long download times for extra textures when connecting to a Counter Strike: Source server I rented with some friends. The program was very simple, and only unzipped and moved some files to a specific director on the user's computer. It wasn't much, and was only really used by me and my friends, but it started my love for creating things that solve problems.</string>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Web Localiser" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8Y-K0-3O8">
+                                        <rect key="frame" x="20" y="515" width="560" height="20"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jg8-hV-zzZ">
+                                        <rect key="frame" x="20" y="543" width="560" height="125"/>
+                                        <string key="text">Web Localiser was my first publicly-released piece of software. Web Localiser provided a button in Safari's toolbar to quickly switch between TLDs, such as .com and .co.uk. It wasn't huge, but it got a substantial nubmer of downloads and gave me a taste of what it's like to release software that genuinly helped people. The best feeling was getting an email from someone that was thanking me for creating Web Localiser.</string>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="V8Y-K0-3O8" secondAttribute="trailing" constant="20" symbolic="YES" id="7Cb-Fc-Kik"/>
+                                    <constraint firstItem="giy-5P-66E" firstAttribute="top" secondItem="8Lh-Ss-01H" secondAttribute="bottom" constant="8" symbolic="YES" id="B5v-gD-Uob"/>
+                                    <constraint firstItem="V8Y-K0-3O8" firstAttribute="leading" secondItem="fRL-Bk-GiU" secondAttribute="leading" constant="20" symbolic="YES" id="SYh-W7-Fxh"/>
+                                    <constraint firstAttribute="centerX" secondItem="8Lh-Ss-01H" secondAttribute="centerX" id="UZX-4U-mW2"/>
+                                    <constraint firstItem="UqQ-n0-nnw" firstAttribute="top" secondItem="giy-5P-66E" secondAttribute="bottom" constant="8" symbolic="YES" id="bmv-nH-lrq"/>
+                                    <constraint firstItem="UqQ-n0-nnw" firstAttribute="width" secondItem="giy-5P-66E" secondAttribute="width" id="dj5-nJ-xwd"/>
+                                    <constraint firstAttribute="trailing" secondItem="jg8-hV-zzZ" secondAttribute="trailing" constant="20" symbolic="YES" id="e42-eA-I71"/>
+                                    <constraint firstItem="V8Y-K0-3O8" firstAttribute="top" secondItem="dqs-qH-AVO" secondAttribute="bottom" constant="8" symbolic="YES" id="ef6-35-pGq"/>
+                                    <constraint firstItem="8Lh-Ss-01H" firstAttribute="top" secondItem="fRL-Bk-GiU" secondAttribute="top" constant="20" symbolic="YES" id="gBx-T9-LcK"/>
+                                    <constraint firstItem="jg8-hV-zzZ" firstAttribute="top" secondItem="V8Y-K0-3O8" secondAttribute="bottom" constant="8" symbolic="YES" id="gTl-Vn-JQY"/>
+                                    <constraint firstAttribute="trailing" secondItem="dqs-qH-AVO" secondAttribute="trailing" constant="20" symbolic="YES" id="hoC-6d-ARm"/>
+                                    <constraint firstItem="giy-5P-66E" firstAttribute="leading" secondItem="fRL-Bk-GiU" secondAttribute="leading" constant="20" symbolic="YES" id="iSj-zm-sc1"/>
+                                    <constraint firstItem="UqQ-n0-nnw" firstAttribute="leading" secondItem="fRL-Bk-GiU" secondAttribute="leading" constant="20" symbolic="YES" id="jNU-sR-ZjV"/>
+                                    <constraint firstItem="dqs-qH-AVO" firstAttribute="width" secondItem="giy-5P-66E" secondAttribute="width" id="kT2-f9-BTR"/>
+                                    <constraint firstAttribute="trailing" secondItem="UqQ-n0-nnw" secondAttribute="trailing" constant="20" symbolic="YES" id="ohr-1f-WXf"/>
+                                    <constraint firstItem="dqs-qH-AVO" firstAttribute="top" secondItem="UqQ-n0-nnw" secondAttribute="bottom" constant="8" symbolic="YES" id="pFf-n3-j6F"/>
+                                    <constraint firstAttribute="bottom" secondItem="jg8-hV-zzZ" secondAttribute="bottom" constant="20" symbolic="YES" id="rhl-0C-z8H"/>
+                                    <constraint firstAttribute="trailing" secondItem="giy-5P-66E" secondAttribute="trailing" constant="20" symbolic="YES" id="sUJ-3f-TDP"/>
+                                    <constraint firstItem="dqs-qH-AVO" firstAttribute="leading" secondItem="fRL-Bk-GiU" secondAttribute="leading" constant="20" symbolic="YES" id="yBk-OO-hFv"/>
+                                    <constraint firstItem="jg8-hV-zzZ" firstAttribute="leading" secondItem="fRL-Bk-GiU" secondAttribute="leading" constant="20" symbolic="YES" id="ykL-fC-HbD"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="dj5-nJ-xwd"/>
+                                        <exclude reference="kT2-f9-BTR"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="fRL-Bk-GiU" firstAttribute="top" secondItem="deA-Bc-g0a" secondAttribute="top" id="IQ3-K9-9LR"/>
+                            <constraint firstItem="fRL-Bk-GiU" firstAttribute="leading" secondItem="deA-Bc-g0a" secondAttribute="leading" id="Q8x-Nb-XM0"/>
+                            <constraint firstAttribute="bottom" secondItem="fRL-Bk-GiU" secondAttribute="bottom" id="XI4-rN-qfh"/>
+                            <constraint firstItem="giy-5P-66E" firstAttribute="width" secondItem="deA-Bc-g0a" secondAttribute="width" constant="-40" id="mbx-Fd-huR"/>
+                            <constraint firstAttribute="trailing" secondItem="fRL-Bk-GiU" secondAttribute="trailing" id="wLS-mh-hyY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="About Me" id="nd9-ni-sCc"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="800"/>
+                    <connections>
+                        <outlet property="scrollView" destination="fRL-Bk-GiU" id="Pmm-bP-Ka3"/>
+                        <outletCollection property="labels" destination="giy-5P-66E" collectionClass="NSMutableArray" id="iTb-MV-2bU"/>
+                        <outletCollection property="labels" destination="UqQ-n0-nnw" collectionClass="NSMutableArray" id="cIq-K9-PVk"/>
+                        <outletCollection property="labels" destination="dqs-qH-AVO" collectionClass="NSMutableArray" id="OIY-Vy-wTX"/>
+                        <outletCollection property="labels" destination="V8Y-K0-3O8" collectionClass="NSMutableArray" id="g6c-Cy-8r4"/>
+                        <outletCollection property="labels" destination="jg8-hV-zzZ" collectionClass="NSMutableArray" id="p44-1B-8Q5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="obg-g8-tfW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1471" y="446"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gVA-Eo-3NN">
+            <objects>
+                <navigationController storyboardIdentifier="AboutMeRootViewController" automaticallyAdjustsScrollViewInsets="NO" id="YTF-iK-hDa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eti-o2-qg6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="69C-8Q-DS9" kind="relationship" relationship="rootViewController" id="KBB-Qy-Zvr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GKw-A5-BkF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="659" y="446"/>
         </scene>
     </scenes>
     <resources>

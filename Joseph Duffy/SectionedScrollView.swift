@@ -11,17 +11,22 @@ import UIKit
 class SectionedScrollView: UIScrollView, UIScrollViewDelegate {
     private(set) var sectionViews: [UIView]? {
         didSet {
-            self.needsLayout = true
+            self.sectionsNeedResizing = true
         }
     }
-    private(set) var sectionViewControllers: [UIViewController]? {
-        didSet {
-            self.needsLayout = true
+
+    var sectionsNeedResizing = false
+
+    var currentIndex: Int {
+        get {
+            let dimensions = self.getDimensions()
+
+            let column = Int(round(self.contentOffset.x / dimensions.width))
+            let row = Int(round(self.contentOffset.y / dimensions.height))
+
+            return (row * self.columns) + column
         }
     }
-    var needsLayout = false
-    var initialIndex: Int?
-    private(set) var currentIndex = 0
     private(set) var columns = 0
     private(set) var rows = 0
 
@@ -29,11 +34,13 @@ class SectionedScrollView: UIScrollView, UIScrollViewDelegate {
 
     func setup(sectionViews: [UIView]) {
         self.pagingEnabled = true
-        self.bounces = false
         self.showsHorizontalScrollIndicator = false
         self.showsVerticalScrollIndicator = false
 
         self.addSubview(self.containerView)
+        for sectionView in sectionViews {
+            self.containerView.addSubview(sectionView)
+        }
 
         self.sectionViews = sectionViews
         self.delegate = self
@@ -81,13 +88,16 @@ class SectionedScrollView: UIScrollView, UIScrollViewDelegate {
     }
 
     override func layoutSubviews() {
-        if let sectionViews = self.sectionViews where self.needsLayout {
-            let isLandscape = UIApplication.sharedApplication().statusBarOrientation.isLandscape
+        super.layoutSubviews()
 
-            let frameWidth = CGRectGetWidth(self.frame)
-            let frameHeight = CGRectGetHeight(self.frame)
+//        println("Layout subviews")
 
-            if sectionViews.count > 2 && isLandscape {
+        if let sectionViews = self.sectionViews where self.sectionsNeedResizing {
+            println("Laying out subviews")
+
+            let dimensions = self.getDimensions()
+
+            if sectionViews.count > 2 && dimensions.isLandscape {
                 self.columns = 3
             } else if sectionViews.count > 1 {
                 self.columns = 2
@@ -97,13 +107,13 @@ class SectionedScrollView: UIScrollView, UIScrollViewDelegate {
                 self.columns = 0
             }
 
-            if isLandscape {
+            if dimensions.isLandscape {
                 self.rows = Int(ceil(Double(sectionViews.count) / 3.0))
             } else {
                 self.rows = Int(ceil(Double(sectionViews.count) / 2.0))
             }
 
-            let size = CGSize(width: frameWidth * CGFloat(self.columns), height: frameHeight * CGFloat(self.rows))
+            let size = CGSize(width: dimensions.width * CGFloat(self.columns), height: dimensions.height * CGFloat(self.rows))
             self.containerView.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: size)
             self.contentSize = size
 
@@ -111,58 +121,26 @@ class SectionedScrollView: UIScrollView, UIScrollViewDelegate {
                 let xMultiplier: CGFloat = CGFloat(index % self.columns)
                 let yMultiplier: CGFloat = CGFloat(floor(Double(index) / Double(self.columns)))
 
-                let sectionViewFrame = CGRect(x: frameWidth * xMultiplier, y: frameHeight * yMultiplier, width: self.frame.size.width, height: self.frame.size.height)
+                let sectionViewFrame = CGRect(x: dimensions.width * xMultiplier, y: dimensions.height * yMultiplier, width: dimensions.width, height: dimensions.height)
                 sectionView.frame = sectionViewFrame
-
-                self.containerView.addSubview(sectionView)
             }
 
-            if let initialIndex = self.initialIndex {
-                let offset = self.offsetForIndex(initialIndex)
-                self.contentOffset = offset
-
-                // Enable bounces so the zoom will go outside of the overall view
-//                self.bounces = true
-//                self.bouncesZoom = false
-
-//                self.setZoomScale(self.minimumZoomScale, animated: false)
-//                println(self.contentOffset)
-//                self.setZoomScale(1, animated: true)
-
-//                self.transform = CGAffineTransformMakeScale(self.minimumZoomScale, self.minimumZoomScale)
-//
-//                UIView.animateWithDuration(1, animations: { () -> Void in
-//                    self.transform = CGAffineTransformIdentity
-//                })
+            if self.contentOffset.x % dimensions.width != 0 || self.contentOffset.y % dimensions.height != 0 {
+                println("Offset was incorrect")
+                let correctContentOffset = self.offsetForIndex(self.currentIndex)
+                self.contentOffset = correctContentOffset
             }
 
-//            if self.zoomScale != 1 {
-//                let zoomScale = self.zoomScale
-//                self.setZoomScale(1, animated: false)
-//                self.bounces = true
-//
-//                if let initialIndex = self.initialIndex {
-//                    self.contentOffset = self.offsetForIndex(initialIndex)
-//                }
-//                println(self.contentOffset)
-////                self.contentOffset = CGPoint(x: self.contentOffset.x - (frameWidth * zoomScale), y: self.contentOffset.y - (frameHeight * zoomScale))
-////                println(self.contentOffset)
-//                self.setZoomScale(zoomScale, animated: false)
-//                self.setZoomScale(1, animated: true)
-////                self.bounces = false
-//            }
-
-            self.needsLayout = false
+            self.sectionsNeedResizing = false
         }
     }
 
     func offsetForIndex(index: Int) -> CGPoint {
-        let frameWidth = CGRectGetWidth(self.frame)
-        let frameHeight = CGRectGetHeight(self.frame)
+        let dimensions = self.getDimensions()
 
         let indexAsDouble = Double(index)
 
-        return CGPoint(x: frameWidth * CGFloat(index % self.columns), y: frameHeight * CGFloat(floor(Double(index) / Double(self.columns))))
+        return CGPoint(x: dimensions.width * CGFloat(index % self.columns), y: dimensions.height * CGFloat(floor(Double(index) / Double(self.columns))))
     }
 
 }

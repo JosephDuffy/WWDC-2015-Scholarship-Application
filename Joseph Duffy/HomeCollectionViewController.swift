@@ -18,8 +18,6 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         self.accessibilityLabel = "Joseph Duffy Home"
 
         UIApplication.sharedApplication().statusBarHidden = true
-
-        self.collectionView?.collectionViewLayout.invalidateLayout()
     }
 
     override func prefersStatusBarHidden() -> Bool {
@@ -28,25 +26,21 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
 
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if let segue = segue as? ImageZoomStoryboardSegue, imageView = sender as? UIImageView {
-//            segue.imageViewToPresentFrom = imageView
-//        }
-//    }
-
     @IBAction func returnToIntro(segue: UIStoryboardSegue) {
         println("You're back in the room")
+
+        // The device could have rotate since the view was last shown, so
+        // invalidate the layout to cause the section's sizes to be correct
+        self.collectionView?.collectionViewLayout.invalidateLayout()
     }
 
-    override func supportedInterfaceOrientations() -> Int {
-        if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
-            return Int(UIInterfaceOrientationMask.LandscapeLeft.rawValue | UIInterfaceOrientationMask.LandscapeRight.rawValue)
-        } else {
-            return Int(UIInterfaceOrientationMask.Portrait.rawValue)
-        }
-    }
-
+//    override func supportedInterfaceOrientations() -> Int {
+//        if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
+//            return Int(UIInterfaceOrientationMask.LandscapeLeft.rawValue | UIInterfaceOrientationMask.LandscapeRight.rawValue)
+//        } else {
+//            return Int(UIInterfaceOrientationMask.Portrait.rawValue)
+//        }
+//    }
 
     // MARK: - Navigation
 
@@ -56,8 +50,7 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if let containerViewContoller = segue.destinationViewController as? ContainerViewController {
-            containerViewContoller.initialIndex = self.selectedIndexPath?.row
-
+            containerViewContoller.indexToShow = self.selectedIndexPath?.row
         }
     }
 
@@ -97,14 +90,11 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
     }
 
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        let isLandscape = self.interfaceOrientation.isLandscape
-        let numberOfColumns: CGFloat = isLandscape ? 3 : 2
-        let numberOfRows: CGFloat = isLandscape ? 2 : 3
+        let dimensions = self.view.getDimensions()
+        let numberOfColumns: CGFloat = dimensions.isLandscape ? 3 : 2
+        let numberOfRows: CGFloat = dimensions.isLandscape ? 2 : 3
 
-        let viewWidth = isLandscape ? self.view.frame.size.height : self.view.frame.size.width
-        let viewHeight = isLandscape ? self.view.frame.size.width : self.view.frame.size.height
-
-        return CGSize(width: viewWidth / numberOfColumns, height: viewHeight / numberOfRows)
+        return CGSize(width: dimensions.width / numberOfColumns, height: dimensions.height / numberOfRows)
     }
 
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
@@ -121,14 +111,21 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
 
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         if let cell = self.collectionView(collectionView, cellForItemAtIndexPath: indexPath) as? HomeCollectionViewCell {
-            println(cell)
-            println(cell.contentView)
             self.selectedIndexPath = indexPath
             self.performSegueWithIdentifier("showSegment", sender: cell.imageView)
         }
     }
 
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+
+        self.collectionView?.collectionViewLayout.invalidateLayout()
+    }
+
+    override func willRotateToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
+        super.willRotateToInterfaceOrientation(toInterfaceOrientation, duration: duration)
+        println("Will rototate")
+
         self.collectionView?.collectionViewLayout.invalidateLayout()
     }
 

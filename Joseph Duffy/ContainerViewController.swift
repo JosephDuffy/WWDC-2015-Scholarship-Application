@@ -10,7 +10,8 @@ import UIKit
 
 class ContainerViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var scollView: SectionedScrollView!
-    var initialIndex: Int?
+
+    var indexToShow: Int?
 
     private var viewControllers: [UIViewController]?
 
@@ -35,7 +36,6 @@ class ContainerViewController: UIViewController, UIScrollViewDelegate {
 
             self.viewControllers = viewControllers
 
-            self.scollView.initialIndex = self.initialIndex
             self.scollView.setup(views)
             self.scollView.delegate = self
 
@@ -43,36 +43,77 @@ class ContainerViewController: UIViewController, UIScrollViewDelegate {
             if minScale > 0.5 {
                 minScale = 1 - minScale
             }
-            println("Min scale: \(minScale)")
 
             self.scollView.minimumZoomScale = 0.4
-//            self.scollView.setZoomScale(0.5, animated: false)
 
             UIApplication.sharedApplication().statusBarHidden = true
         }
     }
 
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(animated: Bool) {
+
+        if let indexToShow = self.indexToShow {
+            self.scollView.contentOffset = self.scollView.offsetForIndex(indexToShow)
+            self.indexToShow = nil
+        }
+    }
+
+//    override func viewDidAppear(animated: Bool) {
+//        super.viewDidAppear(animated)
 
 //        if self.scollView.zoomScale != 1 {
 //            self.scollView.bounces = true
 //            self.scollView.setZoomScale(1, animated: true)
 //            self.scollView.bounces = false
 //        }
+
+
+//        self.scollView.setZoomScale(1, animated: false)
+//
+//        // Enable bounces so the zoom will go outside of the overall view
+//        self.scollView.bounces = true
+//        UIView.animateWithDuration(1, animations: { () -> Void in
+//            self.scollView.setZoomScale(self.scollView.minimumZoomScale, animated: false)
+//        }) { (com) -> Void in
+//            if com {
+//                UIView.animateWithDuration(1, animations: { () -> Void in
+//                    self.scollView.setZoomScale(1, animated: false)
+//                    }, completion: { (completed) -> Void in
+//                        if completed {
+//                            self.scollView.bounces = false
+//                        }
+//                })
+//            }
+//        }
+//    }
+
+    override func shouldAutorotate() -> Bool {
+        return false
     }
+
+//    override func willRotateToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
+//        super.willRotateToInterfaceOrientation(toInterfaceOrientation, duration: duration)
+//
+//        self.scollView.sectionsNeedResizing = true
+//    }
+//
+//    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+//        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+//
+//        self.scollView.sectionsNeedResizing = true
+//    }
 
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
 
-    override func supportedInterfaceOrientations() -> Int {
-        if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
-            return Int(UIInterfaceOrientationMask.LandscapeLeft.rawValue | UIInterfaceOrientationMask.LandscapeRight.rawValue)
-        } else {
-            return Int(UIInterfaceOrientationMask.Portrait.rawValue)
-        }
-    }
+//    override func supportedInterfaceOrientations() -> Int {
+//        if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
+//            return Int(UIInterfaceOrientationMask.LandscapeLeft.rawValue | UIInterfaceOrientationMask.LandscapeRight.rawValue)
+//        } else {
+//            return Int(UIInterfaceOrientationMask.Portrait.rawValue)
+//        }
+//    }
 
     // MARK: Zooming
 
@@ -85,7 +126,7 @@ class ContainerViewController: UIViewController, UIScrollViewDelegate {
         // Setting bounces to true allows for the "outside" of the scroll
         // view to be visible when zooming. When bounces is set to false and
         // the user zooms, it'll be restricted to the top and left sides
-        scrollView.bounces = true
+//        scrollView.bounces = true
 
         if !self.performedSegue {
             if scrollView.zoomScale < scrollView.minimumZoomScale {
@@ -95,17 +136,36 @@ class ContainerViewController: UIViewController, UIScrollViewDelegate {
     }
 
     func scrollViewDidEndZooming(scrollView: UIScrollView, withView view: UIView!, atScale scale: CGFloat) {
-        println("Ended zooming")
-        if scale > 0.6 {
-            scrollView.setZoomScale(1, animated: true)
-            scrollView.bounces = false
-        } else {
-            self.performUnwindSegue()
+        if scale < 1 {
+            if scale > 0.6 {
+//                scrollView.setZoomScale(1, animated: true)
+
+//                let correctContentOffset = self.scollView.offsetForIndex(self.scollView.currentIndex)
+//                if !CGPointEqualToPoint(scrollView.contentOffset, correctContentOffset) {
+//                    println("Correcting from content offset \(scrollView.contentOffset) to \(correctContentOffset)")
+//                    scrollView.contentOffset = correctContentOffset
+//                }
+
+                UIView.animateWithDuration(0.1, animations: { () -> Void in
+                    scrollView.setZoomScale(1, animated: false)
+                }, completion: { (finished) -> Void in
+                    if finished {
+                        let index = self.scollView.currentIndex
+                        let correctContentOffset = self.scollView.offsetForIndex(index)
+
+                        if !CGPointEqualToPoint(scrollView.contentOffset, correctContentOffset) {
+                            println("Correcting from content offset \(scrollView.contentOffset) to \(correctContentOffset)")
+                            scrollView.contentOffset = correctContentOffset
+                        }
+                    }
+                })
+            } else {
+                self.performUnwindSegue()
+            }
         }
     }
 
     private func performUnwindSegue() {
-        println("Popping")
         // Reset the delegate so the scroll view doesn't capture self and
         // try and continue sending delegate calls
         self.scollView.delegate = nil

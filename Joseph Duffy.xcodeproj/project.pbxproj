@@ -30,6 +30,8 @@
 		D9822CDD1AE7CDF200A1E988 /* Humber Bridge Panorama.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D9822CDC1AE7CDF200A1E988 /* Humber Bridge Panorama.jpg */; };
 		D988E10B1AE7E745009726FB /* Photo of Me.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D988E10A1AE7E745009726FB /* Photo of Me.jpg */; };
 		D988E10D1AE7EC16009726FB /* Beethoven Symphony No.9 Cover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D988E10C1AE7EC16009726FB /* Beethoven Symphony No.9 Cover.jpg */; };
+		D988E10F1AE81750009726FB /* AccessibilitySectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D988E10E1AE81750009726FB /* AccessibilitySectionViewController.swift */; };
+		D9F79E0B1AE8266500072862 /* UIView+Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F79E0A1AE8266500072862 /* UIView+Dimensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		D9822CDC1AE7CDF200A1E988 /* Humber Bridge Panorama.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Humber Bridge Panorama.jpg"; sourceTree = "<group>"; };
 		D988E10A1AE7E745009726FB /* Photo of Me.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Photo of Me.jpg"; sourceTree = "<group>"; };
 		D988E10C1AE7EC16009726FB /* Beethoven Symphony No.9 Cover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Beethoven Symphony No.9 Cover.jpg"; sourceTree = "<group>"; };
+		D988E10E1AE81750009726FB /* AccessibilitySectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessibilitySectionViewController.swift; sourceTree = "<group>"; };
+		D9F79E0A1AE8266500072862 /* UIView+Dimensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Dimensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +185,7 @@
 				D9822CD31AE6E04200A1E988 /* AppSectionViewController.swift */,
 				D9822CCD1AE6CFA900A1E988 /* GatheredViewController.swift */,
 				D9822CD11AE6DFCB00A1E988 /* FourSquaresViewController.swift */,
+				D988E10E1AE81750009726FB /* AccessibilitySectionViewController.swift */,
 			);
 			name = Sections;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				D9822CBA1AE5871C00A1E988 /* SectionedScrollView.swift */,
+				D9F79E0A1AE8266500072862 /* UIView+Dimensions.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -322,6 +328,8 @@
 				D9822CCC1AE67E4600A1E988 /* SectionViewController.swift in Sources */,
 				D9822CD41AE6E04200A1E988 /* AppSectionViewController.swift in Sources */,
 				D9822C941AE584CD00A1E988 /* AppDelegate.swift in Sources */,
+				D988E10F1AE81750009726FB /* AccessibilitySectionViewController.swift in Sources */,
+				D9F79E0B1AE8266500072862 /* UIView+Dimensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
