@@ -15,7 +15,6 @@
 		D9822CB51AE5860800A1E988 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9822CB41AE5860800A1E988 /* IntroViewController.swift */; };
 		D9822CB71AE5861000A1E988 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9822CB61AE5861000A1E988 /* AboutViewController.swift */; };
 		D9822CB91AE5867600A1E988 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9822CB81AE5867600A1E988 /* ContainerViewController.swift */; };
-		D9822CBB1AE5871C00A1E988 /* SectionedScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9822CBA1AE5871C00A1E988 /* SectionedScrollView.swift */; };
 		D9822CBF1AE5AC1800A1E988 /* BlurStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9822CBE1AE5AC1800A1E988 /* BlurStoryboardSegue.swift */; };
 		D9822CC11AE6426B00A1E988 /* ZoomStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9822CC01AE6426B00A1E988 /* ZoomStoryboardSegue.swift */; };
 		D9822CC61AE668CC00A1E988 /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9822CC41AE668CC00A1E988 /* HomeCollectionViewController.swift */; };
@@ -32,6 +31,8 @@
 		D988E10D1AE7EC16009726FB /* Beethoven Symphony No.9 Cover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D988E10C1AE7EC16009726FB /* Beethoven Symphony No.9 Cover.jpg */; };
 		D988E10F1AE81750009726FB /* AccessibilitySectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D988E10E1AE81750009726FB /* AccessibilitySectionViewController.swift */; };
 		D9F79E0B1AE8266500072862 /* UIView+Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F79E0A1AE8266500072862 /* UIView+Dimensions.swift */; };
+		D9F79E0D1AE845FA00072862 /* WorkAndEducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F79E0C1AE845FA00072862 /* WorkAndEducationViewController.swift */; };
+		D9F79E0F1AEBC50800072862 /* HobbiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F79E0E1AEBC50800072862 /* HobbiesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +58,6 @@
 		D9822CB41AE5860800A1E988 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		D9822CB61AE5861000A1E988 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		D9822CB81AE5867600A1E988 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
-		D9822CBA1AE5871C00A1E988 /* SectionedScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionedScrollView.swift; sourceTree = "<group>"; };
 		D9822CBE1AE5AC1800A1E988 /* BlurStoryboardSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurStoryboardSegue.swift; sourceTree = "<group>"; };
 		D9822CC01AE6426B00A1E988 /* ZoomStoryboardSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomStoryboardSegue.swift; sourceTree = "<group>"; };
 		D9822CC41AE668CC00A1E988 /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +74,8 @@
 		D988E10C1AE7EC16009726FB /* Beethoven Symphony No.9 Cover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Beethoven Symphony No.9 Cover.jpg"; sourceTree = "<group>"; };
 		D988E10E1AE81750009726FB /* AccessibilitySectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessibilitySectionViewController.swift; sourceTree = "<group>"; };
 		D9F79E0A1AE8266500072862 /* UIView+Dimensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Dimensions.swift"; sourceTree = "<group>"; };
+		D9F79E0C1AE845FA00072862 /* WorkAndEducationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkAndEducationViewController.swift; sourceTree = "<group>"; };
+		D9F79E0E1AEBC50800072862 /* HobbiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HobbiesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,8 @@
 				D9822CCD1AE6CFA900A1E988 /* GatheredViewController.swift */,
 				D9822CD11AE6DFCB00A1E988 /* FourSquaresViewController.swift */,
 				D988E10E1AE81750009726FB /* AccessibilitySectionViewController.swift */,
+				D9F79E0C1AE845FA00072862 /* WorkAndEducationViewController.swift */,
+				D9F79E0E1AEBC50800072862 /* HobbiesViewController.swift */,
 			);
 			name = Sections;
 			sourceTree = "<group>";
@@ -193,7 +197,6 @@
 		D9822CCA1AE66AE900A1E988 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D9822CBA1AE5871C00A1E988 /* SectionedScrollView.swift */,
 				D9F79E0A1AE8266500072862 /* UIView+Dimensions.swift */,
 			);
 			name = View;
@@ -318,7 +321,6 @@
 				D9822CC61AE668CC00A1E988 /* HomeCollectionViewController.swift in Sources */,
 				D9822CBF1AE5AC1800A1E988 /* BlurStoryboardSegue.swift in Sources */,
 				D9822CD21AE6DFCB00A1E988 /* FourSquaresViewController.swift in Sources */,
-				D9822CBB1AE5871C00A1E988 /* SectionedScrollView.swift in Sources */,
 				D9822CC71AE668CC00A1E988 /* HomeCollectionViewCell.swift in Sources */,
 				D9822CC11AE6426B00A1E988 /* ZoomStoryboardSegue.swift in Sources */,
 				D9822CCE1AE6CFA900A1E988 /* GatheredViewController.swift in Sources */,
@@ -326,8 +328,10 @@
 				D9822CC91AE6699300A1E988 /* AppSection.swift in Sources */,
 				D9822CB71AE5861000A1E988 /* AboutViewController.swift in Sources */,
 				D9822CCC1AE67E4600A1E988 /* SectionViewController.swift in Sources */,
+				D9F79E0D1AE845FA00072862 /* WorkAndEducationViewController.swift in Sources */,
 				D9822CD41AE6E04200A1E988 /* AppSectionViewController.swift in Sources */,
 				D9822C941AE584CD00A1E988 /* AppDelegate.swift in Sources */,
+				D9F79E0F1AEBC50800072862 /* HobbiesViewController.swift in Sources */,
 				D988E10F1AE81750009726FB /* AccessibilitySectionViewController.swift in Sources */,
 				D9F79E0B1AE8266500072862 /* UIView+Dimensions.swift in Sources */,
 			);

@@ -47,23 +47,25 @@ enum AppSection: Int {
     var mainColor: UIColor {
         switch self {
         case .About:
-            return UIColor(red:0.922, green:0.486, blue:0.000, alpha: 1)
+            return UIColor(red: 237/255, green: 200/255, blue: 59/255, alpha: 1)
         case .Work:
-            return UIColor(red:0.329, green:0.898, blue:0.835, alpha: 1)
+            return UIColor(red: 47/255, green: 174/255, blue: 164/255, alpha: 1)
         case .Gathered:
             return UIColor(red:251/255, green:78/255, blue:67/255, alpha: 1)
         case .FourSquares:
             return UIColor(red:0.922, green:0.408, blue:0.408, alpha: 1)
         case .Hobbies:
-            return .whiteColor()
+            return UIColor(red: 123/255, green: 3/255, blue: 1, alpha: 1)
         case .Accessiblity:
-            return .grayColor()
+            return .darkGrayColor()
         }
     }
 
     var textColor: UIColor? {
         switch self {
-        case .Accessiblity:
+        case .About:
+            return UIColor(red: 41/255, green: 41/255, blue: 40/255, alpha: 1)
+        case .Hobbies, .Accessiblity:
             return .whiteColor()
         default:
             return nil
@@ -72,8 +74,10 @@ enum AppSection: Int {
 
     var barTintColor: UIColor? {
         switch self {
+        case .Hobbies:
+            return UIColor(red: 222/255, green: 206/255, blue: 252/255, alpha: 1)
         case .Accessiblity:
-            return .darkGrayColor()
+            return .grayColor()
         default:
             return nil
         }

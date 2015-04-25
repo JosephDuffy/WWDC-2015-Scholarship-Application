@@ -20,7 +20,7 @@ extension UIView {
         let viewWidth: CGFloat
         let viewHeight: CGFloat
 
-        if self.window == nil && UIApplication.sharedApplication().statusBarOrientation.isLandscape {
+        if self.window == nil && UIApplication.sharedApplication().statusBarOrientation.isLandscape && (UIDevice.currentDevice().systemVersion as NSString).floatValue < 8 {
             // Have to swap width/height
             println("Getting dimensions without a window")
             landscape = true

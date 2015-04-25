@@ -117,7 +117,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Gf-oM-x6r" customClass="SectionedScrollView" customModule="Joseph_Duffy" customModuleProvider="target">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Gf-oM-x6r">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </scrollView>
                         </subviews>
@@ -143,7 +143,7 @@
         <!--Work and Education-->
         <scene sceneID="Oft-tR-ZIu">
             <objects>
-                <viewController id="Yjd-6P-Okq" customClass="SectionViewController" customModule="Joseph_Duffy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Yjd-6P-Okq" customClass="WorkAndEducationViewController" customModule="Joseph_Duffy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qLE-FE-l0G"/>
                         <viewControllerLayoutGuide type="bottom" id="qcs-LT-HpC"/>
@@ -175,49 +175,112 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8N-G3-AUj">
-                                        <rect key="frame" x="20" y="167" width="560" height="356"/>
-                                        <string key="text">Despite still being young, I have manage to get invaluable experience by working in the industry. After creating websites and an open-source CMS written in PHP, I got my first job at the end of my first of University at WSI as a Web Developer. After working there for a little over year, I left to work at Clever4 in order to complete an industrial placement.
-
-I was initially hired as a C#.NET Web Developer at Clever4, but my love and knowledge for mobile developement was known from the start. When the opportunity to create an iOS app arose we jumped on it, and I am now creating an iOS within Clever4: Curro.
-
-Curro is an activity monitor, aimed at making it easier for spectators, charities and event organisers to track the progress of fund raisers. I have really enjoyed creating Curro and hope to be continuing the developement while I am at University, hopefully implementing any new APIs that iOS 9 will have to offer and taking advantage of any new hardware that is released by Apple.</string>
+                                        <rect key="frame" x="20" y="167" width="560" height="104"/>
+                                        <string key="text">Despite still being young, I have manage to get invaluable experience by working in the industry. After creating websites and an open-source CMS written in PHP, I got my first job at the end of my first of University at WSI as a Web Developer. After working there for a little over year, I left to work at Clever4 in order to complete an industrial placement.</string>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yetii" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtb-mP-zjy">
-                                        <rect key="frame" x="20" y="531" width="560" height="20"/>
+                                        <rect key="frame" x="20" y="562" width="560" height="20"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bk-wd-JwB">
-                                        <rect key="frame" x="20" y="559" width="560" height="62"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clever4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLW-2Z-a8g">
+                                        <rect key="frame" x="20" y="279" width="560" height="20"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZL-62-f59">
+                                        <rect key="frame" x="20" y="307" width="560" height="247"/>
+                                        <mutableString key="text">I was initially hired as a C#.NET Web Developer at Clever4, but my love and knowledge for mobile developement was known from the start. When the opportunity to create an iOS app arose we jumped on it, and I am now creating an iOS within Clever4: Curro.
+
+Curro is an activity monitor, aimed at making it easier for spectators, charities and event organisers to track the progress of fund raisers. I have really enjoyed creating Curro and hope to be continuing the developement while I am at University, hopefully implementing any new APIs that iOS 9 will have to offer and taking advantage of any new hardware that is released by Apple.</mutableString>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clever4 Logo" translatesAutoresizingMaskIntoConstraints="NO" id="3fq-DW-PYE">
+                                        <rect key="frame" x="452" y="307" width="128" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="3fq-DW-PYE" secondAttribute="height" multiplier="1:1" id="LsM-GF-ork"/>
+                                            <constraint firstAttribute="width" constant="128" id="p5R-1L-eBc"/>
+                                            <constraint firstAttribute="height" constant="120" id="v2W-qt-4bA"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="v2W-qt-4bA"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clever4's Logo" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RzZ-eO-Qkz">
+                                        <rect key="frame" x="452" y="443" width="128" height="14"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Atm-zX-FGU">
+                                        <rect key="frame" x="20" y="590" width="560" height="79"/>
                                         <string key="text">Yetii is a company I founded in April 2014 to have an overarching brand to release my products under.  I have released both of my personal iOS apps, Gathered and Four Squares, under the Yetii brand.</string>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Yetii Logo" translatesAutoresizingMaskIntoConstraints="NO" id="OYQ-QO-h79">
+                                        <rect key="frame" x="452" y="590" width="128" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="128" id="2uy-Yx-vGO"/>
+                                            <constraint firstAttribute="width" secondItem="OYQ-QO-h79" secondAttribute="height" multiplier="1:1" id="HEP-Rl-2wN"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yetii's Logo" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0PA-dg-qMI">
+                                        <rect key="frame" x="452" y="726" width="128" height="14"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="vtb-mP-zjy" firstAttribute="leading" secondItem="cos-kx-YeL" secondAttribute="leading" constant="20" symbolic="YES" id="1Ys-vV-wrg"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="0PA-dg-qMI" secondAttribute="bottom" constant="20" symbolic="YES" id="2uO-cn-sRM"/>
+                                    <constraint firstItem="RzZ-eO-Qkz" firstAttribute="top" secondItem="3fq-DW-PYE" secondAttribute="bottom" constant="8" symbolic="YES" id="3UN-Vd-yuT"/>
                                     <constraint firstItem="eGl-CX-PEM" firstAttribute="leading" secondItem="cos-kx-YeL" secondAttribute="leading" constant="20" symbolic="YES" id="5QV-tj-4Fi"/>
+                                    <constraint firstItem="qLW-2Z-a8g" firstAttribute="leading" secondItem="cos-kx-YeL" secondAttribute="leading" constant="20" symbolic="YES" id="5RW-Tu-ThS"/>
                                     <constraint firstAttribute="trailing" secondItem="Yyu-Fr-RGc" secondAttribute="trailing" constant="20" symbolic="YES" id="5en-QB-O1G"/>
+                                    <constraint firstItem="0PA-dg-qMI" firstAttribute="width" secondItem="OYQ-QO-h79" secondAttribute="width" id="737-qo-sKp"/>
                                     <constraint firstItem="3lU-B5-eTD" firstAttribute="top" secondItem="eGl-CX-PEM" secondAttribute="bottom" constant="8" symbolic="YES" id="7af-2O-jG1"/>
+                                    <constraint firstItem="qLW-2Z-a8g" firstAttribute="top" secondItem="P8N-G3-AUj" secondAttribute="bottom" constant="8" symbolic="YES" id="9iB-TY-KN8"/>
+                                    <constraint firstItem="vtb-mP-zjy" firstAttribute="top" relation="greaterThanOrEqual" secondItem="RzZ-eO-Qkz" secondAttribute="bottom" constant="8" symbolic="YES" id="CDK-pH-SK5"/>
+                                    <constraint firstItem="0PA-dg-qMI" firstAttribute="leading" secondItem="OYQ-QO-h79" secondAttribute="leading" id="CzZ-J3-syS"/>
                                     <constraint firstItem="3lU-B5-eTD" firstAttribute="leading" secondItem="cos-kx-YeL" secondAttribute="leading" constant="20" symbolic="YES" id="EmN-80-8My"/>
+                                    <constraint firstItem="0PA-dg-qMI" firstAttribute="top" secondItem="OYQ-QO-h79" secondAttribute="bottom" constant="8" symbolic="YES" id="Ga5-hD-Aow"/>
+                                    <constraint firstItem="Atm-zX-FGU" firstAttribute="top" secondItem="vtb-mP-zjy" secondAttribute="bottom" constant="8" symbolic="YES" id="GvJ-gG-Pfa"/>
+                                    <constraint firstItem="RzZ-eO-Qkz" firstAttribute="leading" secondItem="3fq-DW-PYE" secondAttribute="leading" id="ImN-KI-BLT"/>
                                     <constraint firstAttribute="trailing" secondItem="vtb-mP-zjy" secondAttribute="trailing" constant="20" symbolic="YES" id="JGJ-7p-bsZ"/>
-                                    <constraint firstAttribute="bottom" secondItem="4bk-wd-JwB" secondAttribute="bottom" constant="20" symbolic="YES" id="MDE-Fz-xca"/>
-                                    <constraint firstItem="4bk-wd-JwB" firstAttribute="leading" secondItem="cos-kx-YeL" secondAttribute="leading" constant="20" symbolic="YES" id="OU0-J6-qR7"/>
+                                    <constraint firstAttribute="bottom" secondItem="0PA-dg-qMI" secondAttribute="bottom" priority="250" constant="20" symbolic="YES" id="Jv4-uS-LJ8"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Atm-zX-FGU" secondAttribute="bottom" constant="20" symbolic="YES" id="LUL-y6-VlI"/>
+                                    <constraint firstItem="dZL-62-f59" firstAttribute="top" secondItem="qLW-2Z-a8g" secondAttribute="bottom" constant="8" symbolic="YES" id="NPb-Y4-B8R"/>
+                                    <constraint firstItem="Atm-zX-FGU" firstAttribute="leading" secondItem="cos-kx-YeL" secondAttribute="leading" constant="20" symbolic="YES" id="PII-ht-faj"/>
                                     <constraint firstItem="eGl-CX-PEM" firstAttribute="width" secondItem="3lU-B5-eTD" secondAttribute="width" id="QtH-gS-cfy"/>
+                                    <constraint firstAttribute="bottom" secondItem="Atm-zX-FGU" secondAttribute="bottom" priority="250" constant="20" symbolic="YES" id="SaQ-Mc-Cw5"/>
+                                    <constraint firstItem="RzZ-eO-Qkz" firstAttribute="width" secondItem="3fq-DW-PYE" secondAttribute="width" id="TEb-qQ-vaO"/>
                                     <constraint firstItem="Yyu-Fr-RGc" firstAttribute="top" secondItem="cos-kx-YeL" secondAttribute="top" constant="20" symbolic="YES" id="V8W-uV-h99"/>
-                                    <constraint firstItem="4bk-wd-JwB" firstAttribute="top" secondItem="vtb-mP-zjy" secondAttribute="bottom" constant="8" symbolic="YES" id="YvM-2U-tie"/>
+                                    <constraint firstAttribute="trailing" secondItem="dZL-62-f59" secondAttribute="trailing" constant="20" symbolic="YES" id="XKB-2S-EWK"/>
+                                    <constraint firstItem="dZL-62-f59" firstAttribute="leading" secondItem="cos-kx-YeL" secondAttribute="leading" constant="20" symbolic="YES" id="XWI-DA-PUc"/>
+                                    <constraint firstAttribute="trailing" secondItem="3fq-DW-PYE" secondAttribute="trailing" constant="20" symbolic="YES" id="aWM-wR-tfT"/>
                                     <constraint firstItem="eGl-CX-PEM" firstAttribute="top" secondItem="Yyu-Fr-RGc" secondAttribute="bottom" constant="8" symbolic="YES" id="dMN-Ck-eo3"/>
                                     <constraint firstItem="Yyu-Fr-RGc" firstAttribute="leading" secondItem="cos-kx-YeL" secondAttribute="leading" constant="20" symbolic="YES" id="ffa-SY-pIp"/>
+                                    <constraint firstAttribute="trailing" secondItem="OYQ-QO-h79" secondAttribute="trailing" constant="20" symbolic="YES" id="fnW-z1-8Xh"/>
+                                    <constraint firstAttribute="trailing" secondItem="qLW-2Z-a8g" secondAttribute="trailing" constant="20" symbolic="YES" id="gKk-w8-BFf"/>
                                     <constraint firstItem="P8N-G3-AUj" firstAttribute="top" secondItem="3lU-B5-eTD" secondAttribute="bottom" constant="8" symbolic="YES" id="ium-Vw-mZ1"/>
-                                    <constraint firstAttribute="trailing" secondItem="4bk-wd-JwB" secondAttribute="trailing" constant="20" symbolic="YES" id="kPr-M9-rFC"/>
+                                    <constraint firstItem="OYQ-QO-h79" firstAttribute="top" secondItem="vtb-mP-zjy" secondAttribute="bottom" constant="8" symbolic="YES" id="jdH-yP-WPf"/>
+                                    <constraint firstItem="3fq-DW-PYE" firstAttribute="top" secondItem="qLW-2Z-a8g" secondAttribute="bottom" constant="8" symbolic="YES" id="kJO-Ev-qUw"/>
                                     <constraint firstItem="P8N-G3-AUj" firstAttribute="width" secondItem="Yyu-Fr-RGc" secondAttribute="width" id="l88-NV-ecl"/>
+                                    <constraint firstItem="vtb-mP-zjy" firstAttribute="top" secondItem="RzZ-eO-Qkz" secondAttribute="bottom" priority="250" constant="8" symbolic="YES" id="lvM-y8-PSw"/>
                                     <constraint firstItem="P8N-G3-AUj" firstAttribute="leading" secondItem="cos-kx-YeL" secondAttribute="leading" constant="20" symbolic="YES" id="oHb-Pe-rzJ"/>
-                                    <constraint firstItem="vtb-mP-zjy" firstAttribute="top" secondItem="P8N-G3-AUj" secondAttribute="bottom" constant="8" symbolic="YES" id="xBG-C5-knV"/>
+                                    <constraint firstAttribute="trailing" secondItem="Atm-zX-FGU" secondAttribute="trailing" constant="20" symbolic="YES" id="ubg-bg-8F1"/>
+                                    <constraint firstItem="vtb-mP-zjy" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dZL-62-f59" secondAttribute="bottom" constant="8" symbolic="YES" id="xdN-d8-l5r"/>
+                                    <constraint firstItem="vtb-mP-zjy" firstAttribute="top" secondItem="dZL-62-f59" secondAttribute="bottom" priority="250" constant="8" symbolic="YES" id="xwc-Ne-Boy"/>
                                     <constraint firstItem="eGl-CX-PEM" firstAttribute="width" secondItem="Yyu-Fr-RGc" secondAttribute="width" id="zcf-gS-UqH"/>
                                 </constraints>
                             </scrollView>
@@ -235,12 +298,17 @@ Curro is an activity monitor, aimed at making it easier for spectators, charitie
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="900"/>
                     <connections>
+                        <outlet property="clever4ImageView" destination="3fq-DW-PYE" id="8dt-OA-fda"/>
+                        <outlet property="clever4ImageViewCaption" destination="RzZ-eO-Qkz" id="FtF-FD-fct"/>
+                        <outlet property="clever4TextView" destination="dZL-62-f59" id="qCq-PL-1Vx"/>
                         <outlet property="scrollView" destination="cos-kx-YeL" id="YdD-RJ-few"/>
+                        <outlet property="yetiiImageView" destination="OYQ-QO-h79" id="XrD-rr-Mf8"/>
+                        <outlet property="yetiiImageViewCaption" destination="0PA-dg-qMI" id="cpM-3w-4G9"/>
+                        <outlet property="yetiiTextView" destination="Atm-zX-FGU" id="aFn-Bv-zuU"/>
                         <outletCollection property="labels" destination="eGl-CX-PEM" collectionClass="NSMutableArray" id="Ltf-Ch-tG5"/>
                         <outletCollection property="labels" destination="3lU-B5-eTD" collectionClass="NSMutableArray" id="1ST-Jl-1Pa"/>
                         <outletCollection property="labels" destination="P8N-G3-AUj" collectionClass="NSMutableArray" id="DRo-IZ-ZSE"/>
                         <outletCollection property="labels" destination="vtb-mP-zjy" collectionClass="NSMutableArray" id="sGS-rK-Yvo"/>
-                        <outletCollection property="labels" destination="4bk-wd-JwB" collectionClass="NSMutableArray" id="FjN-k8-sm0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XZj-Ph-EYT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -256,11 +324,11 @@ Curro is an activity monitor, aimed at making it easier for spectators, charitie
                         <viewControllerLayoutGuide type="bottom" id="USw-81-lVW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Kr8-f3-yld">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="1100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kle-gu-2aX">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="1100"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Four Sqaures App Icon" translatesAutoresizingMaskIntoConstraints="NO" id="4iO-5Q-0Wf">
                                         <rect key="frame" x="172" y="20" width="256" height="256"/>
@@ -270,20 +338,64 @@ Curro is an activity monitor, aimed at making it easier for spectators, charitie
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zH3-es-OnX">
-                                        <rect key="frame" x="20" y="284" width="560" height="83"/>
-                                        <string key="text">Four Squares is the latest iOS app I have released, and also supports the Apple Watch. When the Apple Watch was announced, lots of discussion was happening within the office at Clever4, and Four Squares came out of that discussion.</string>
+                                        <rect key="frame" x="20" y="284" width="560" height="167"/>
+                                        <string key="text">Four Squares is the latest iOS app I have released, and also supports the Apple Watch. So far, the reception has been very positive, and it has been very satisfying watching people's high scores being added to the Game Center leaderboards.
+
+In the next version, I am planning to release at a new cooperative mode using Bonjour, achievements and any improvements that I feel need to be made to the WatchKit App, once I have received my Apple Watch.</string>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple Watch" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0n-zq-34E">
+                                        <rect key="frame" x="20" y="459" width="560" height="20"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1m-xH-rZy">
+                                        <rect key="frame" x="20" y="487" width="560" height="62"/>
+                                        <string key="text">The concept for Four Squares came not long after the announcement of the Apple Watch while having a discussion with some colleagues about ideas for how the Apple Watch could be used for recreation.</string>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What I Learned" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ED-ze-22E">
+                                        <rect key="frame" x="20" y="557" width="560" height="20"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owp-EK-IbS">
+                                        <rect key="frame" x="20" y="585" width="560" height="377"/>
+                                        <mutableString key="text">As with Gathered, the main reason I created Four Squares was to learn. While working on Four Squares I have learned:
+
+• UIView drawing - The game board is drawn using a custom UIView subclass that draws the buttons using UIBezierPaths, allowing me to not include any images for the game board and ensuring it'll work for all possible sizes
+• Accessiblity - Although the game uses visuals to show a sequence, it also plays sounds. I wanted to ensure that when VoiceOver is enabled the game is still playable. For example, the buttons can be tapped directly without first being selected. I am working on improving the VoiceOver integration even further in future updates.
+• Auto Layout and Size Classes - Although I felt comfortable with Auto Layout, I knew that I had more to learn, and my knowledge of Size Classes was really lacking. To try and build my knowledge in these areas I aimed to support both portrait and landscape orientations on iPhones and iPads, without compromising the gameplay. I am very happy with the results, and hope that user's enjoy the freedom of playing how they with to.</mutableString>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="owp-EK-IbS" firstAttribute="leading" secondItem="kle-gu-2aX" secondAttribute="leading" constant="20" symbolic="YES" id="51s-C3-DFf"/>
+                                    <constraint firstItem="8ED-ze-22E" firstAttribute="top" secondItem="d1m-xH-rZy" secondAttribute="bottom" constant="8" symbolic="YES" id="A11-DR-nn8"/>
+                                    <constraint firstItem="J0n-zq-34E" firstAttribute="leading" secondItem="kle-gu-2aX" secondAttribute="leading" constant="20" symbolic="YES" id="Fpe-hG-QZA"/>
+                                    <constraint firstItem="owp-EK-IbS" firstAttribute="top" secondItem="8ED-ze-22E" secondAttribute="bottom" constant="8" symbolic="YES" id="GdG-U8-vek"/>
+                                    <constraint firstAttribute="trailing" secondItem="J0n-zq-34E" secondAttribute="trailing" constant="20" symbolic="YES" id="Izj-dp-me8"/>
+                                    <constraint firstAttribute="bottom" secondItem="owp-EK-IbS" secondAttribute="bottom" constant="20" symbolic="YES" id="JZW-kG-7BO"/>
+                                    <constraint firstAttribute="trailing" secondItem="d1m-xH-rZy" secondAttribute="trailing" constant="20" symbolic="YES" id="Soc-Bd-fxp"/>
                                     <constraint firstItem="zH3-es-OnX" firstAttribute="leading" secondItem="kle-gu-2aX" secondAttribute="leading" constant="20" symbolic="YES" id="aZn-W3-Gqm"/>
                                     <constraint firstAttribute="centerX" secondItem="4iO-5Q-0Wf" secondAttribute="centerX" id="aa7-2E-5Ms"/>
                                     <constraint firstItem="zH3-es-OnX" firstAttribute="top" secondItem="4iO-5Q-0Wf" secondAttribute="bottom" constant="8" symbolic="YES" id="cBQ-Hp-dCn"/>
-                                    <constraint firstAttribute="bottom" secondItem="zH3-es-OnX" secondAttribute="bottom" constant="20" symbolic="YES" id="gIB-hR-bML"/>
+                                    <constraint firstItem="8ED-ze-22E" firstAttribute="leading" secondItem="kle-gu-2aX" secondAttribute="leading" constant="20" symbolic="YES" id="eH9-jY-Y0o"/>
+                                    <constraint firstItem="d1m-xH-rZy" firstAttribute="top" secondItem="J0n-zq-34E" secondAttribute="bottom" constant="8" symbolic="YES" id="fGg-Re-l84"/>
                                     <constraint firstItem="4iO-5Q-0Wf" firstAttribute="top" secondItem="kle-gu-2aX" secondAttribute="top" constant="20" symbolic="YES" id="n7P-Hi-rmm"/>
                                     <constraint firstAttribute="trailing" secondItem="zH3-es-OnX" secondAttribute="trailing" constant="20" symbolic="YES" id="q9m-kX-PKt"/>
+                                    <constraint firstAttribute="trailing" secondItem="owp-EK-IbS" secondAttribute="trailing" constant="20" symbolic="YES" id="sgF-TO-UL3"/>
+                                    <constraint firstItem="J0n-zq-34E" firstAttribute="top" secondItem="zH3-es-OnX" secondAttribute="bottom" constant="8" symbolic="YES" id="uMG-o1-NfC"/>
+                                    <constraint firstItem="d1m-xH-rZy" firstAttribute="leading" secondItem="kle-gu-2aX" secondAttribute="leading" constant="20" symbolic="YES" id="yr8-Uf-rr1"/>
+                                    <constraint firstAttribute="trailing" secondItem="8ED-ze-22E" secondAttribute="trailing" constant="20" symbolic="YES" id="zWv-HV-ZcR"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -297,6 +409,8 @@ Curro is an activity monitor, aimed at making it easier for spectators, charitie
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Four Squares" id="g7C-gN-SOF"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="1100"/>
                     <connections>
                         <outlet property="appIconImageView" destination="4iO-5Q-0Wf" id="5tL-DO-uXA"/>
                         <outlet property="scrollView" destination="kle-gu-2aX" id="2eG-lR-5Bg"/>
@@ -305,7 +419,7 @@ Curro is an activity monitor, aimed at making it easier for spectators, charitie
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZY0-T2-F8p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3122" y="1334"/>
+            <point key="canvasLocation" x="3122" y="1520"/>
         </scene>
         <!--Gathered-->
         <scene sceneID="d26-JK-1q5">
@@ -425,7 +539,7 @@ For the next version of Gathered I have been looking in to making the app more V
         <!--Hobbies-->
         <scene sceneID="d5g-fp-A5P">
             <objects>
-                <viewController id="LFH-zh-15P" customClass="SectionViewController" customModule="Joseph_Duffy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LFH-zh-15P" customClass="HobbiesViewController" customModule="Joseph_Duffy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dLw-nq-aQx"/>
                         <viewControllerLayoutGuide type="bottom" id="QYn-Z1-XsV"/>
@@ -447,29 +561,68 @@ I also love to build things that aren't programs, such as electronics. Last year
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Humber Bridge Panorama.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="2ze-bR-Hrr">
-                                        <rect key="frame" x="20" y="770" width="560" height="162"/>
+                                        <rect key="frame" x="20" y="777" width="560" height="162"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="2ze-bR-Hrr" secondAttribute="height" multiplier="1024:297" id="8oB-hl-Fp7"/>
                                         </constraints>
                                     </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6K-Af-7mF">
+                                        <rect key="frame" x="20" y="244" width="560" height="142"/>
+                                        <string key="text">Like a lot of people I find listening to music very relaxing. I like to listen to a wide variety of music, and I am always looking for new recommendations. Over the last 2 years I have also been building up a collection of vinyl records. I get great pleasure out of researching which albums have been specifically mastered for vinyl, finding one for sale and then finally listening to it. I have even put some of my favourites on display in my room.</string>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzU-Ic-S7S">
                                         <rect key="frame" x="20" y="216" width="560" height="20"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5Y-nm-M56">
-                                        <rect key="frame" x="20" y="244" width="412" height="167"/>
-                                        <string key="text">Like a lot of people I find listening to music very relaxing. I like to listen to a wide variety of music, and I am always looking for new recommendations. Over the last 2 years I have also been building up a collection of vinyl records. I get great pleasure out of researching which albums have been specifically mastered for vinyl, finding one for sale and then finally listening to it. I have even put some of my favourites on display in my room.</string>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Building Electronics" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDj-ik-oPb">
+                                        <rect key="frame" x="20" y="434" width="560" height="20"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSn-6N-fOe">
+                                        <rect key="frame" x="20" y="462" width="560" height="188"/>
+                                        <string key="text">In a similar way to how I like to solves programing problems, creating electronics is another passion of mine. When I started my record collection I decided to also build my own amplifiers that would be used to listen to them. So far, I have built a power amp, pre-amp and I am in the process of building my final amplifier: a phono amp.
+
+Once I have finished building my final amplifier I am hoping to look in to building some smaller electronics, aimed at home automation, specifically for those living with a disability.</string>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exploring" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWB-la-4Jm">
+                                        <rect key="frame" x="20" y="658" width="560" height="20"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGU-ia-RVn">
+                                        <rect key="frame" x="20" y="686" width="560" height="83"/>
+                                        <string key="text">One aspect of hoping to attend WWDC is that it's set in San Francisco. Whenever I visit or move to a new city I love to explore everything the city has to offer, especially the scenery. The only thing better than listening to music or podcasts is listening while going on a walk.</string>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Panarama including the Humber Bridge, near where I live" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQ3-u3-LIb">
+                                        <rect key="frame" x="20" y="947" width="560" height="14"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some of my favourite records" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75000000000000022" translatesAutoresizingMaskIntoConstraints="NO" id="i0K-ZT-d8K">
+                                        <rect key="frame" x="420" y="412" width="160" height="14"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Records On Wall.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="LpG-js-nmJ">
-                                        <rect key="frame" x="440" y="244" width="140" height="140"/>
+                                        <rect key="frame" x="420" y="244" width="160" height="160"/>
                                         <constraints>
                                             <constraint firstAttribute="height" secondItem="LpG-js-nmJ" secondAttribute="width" id="6Va-V7-A9Y"/>
-                                            <constraint firstAttribute="width" constant="140" id="Ahe-6X-bAK"/>
+                                            <constraint firstAttribute="width" constant="160" id="Ahe-6X-bAK"/>
                                             <constraint firstAttribute="width" constant="220" id="Wsa-TI-x2n"/>
                                         </constraints>
                                         <variation key="default">
@@ -484,63 +637,25 @@ I also love to build things that aren't programs, such as electronics. Last year
                                             </mask>
                                         </variation>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Building Electronics" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDj-ik-oPb">
-                                        <rect key="frame" x="20" y="427" width="560" height="20"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSn-6N-fOe">
-                                        <rect key="frame" x="20" y="455" width="560" height="188"/>
-                                        <string key="text">In a similar way to how I like to solves programing problems, creating electronics is another passion of mine. When I started my record collection I decided to also build my own amplifiers that would be used to listen to them. So far, I have built a power amp, pre-amp and I am in the process of building my final amplifier: a phono amp.
-
-Once I have finished building my final amplifier I am hoping to look in to building some smaller electronics, aimed at home automation, specifically for those living with a disability.</string>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exploring" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWB-la-4Jm">
-                                        <rect key="frame" x="20" y="651" width="560" height="20"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGU-ia-RVn">
-                                        <rect key="frame" x="20" y="679" width="560" height="83"/>
-                                        <string key="text">One aspect of hoping to attend WWDC is that it's set in San Francisco. Whenever I visit or move to a new city I love to explore everything the city has to offer, especially the scenery. The only thing better than listening to music or podcasts is listening while going on a walk.</string>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Panarama including the Humber Bridge, near where I live" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQ3-u3-LIb">
-                                        <rect key="frame" x="20" y="940" width="560" height="14"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some of my favourite records" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0K-ZT-d8K">
-                                        <rect key="frame" x="440" y="392" width="140" height="27"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="LpG-js-nmJ" secondAttribute="trailing" constant="20" symbolic="YES" id="2vI-Xq-Rop"/>
                                     <constraint firstItem="i0K-ZT-d8K" firstAttribute="width" secondItem="LpG-js-nmJ" secondAttribute="width" id="4B0-si-asE"/>
                                     <constraint firstAttribute="bottom" secondItem="VQ3-u3-LIb" secondAttribute="bottom" constant="20" symbolic="YES" id="5BN-lg-Od8"/>
+                                    <constraint firstItem="F6K-Af-7mF" firstAttribute="leading" secondItem="aBI-XJ-Zgd" secondAttribute="leading" constant="20" symbolic="YES" id="68x-dN-9IJ"/>
                                     <constraint firstItem="2ze-bR-Hrr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aBI-XJ-Zgd" secondAttribute="leading" constant="20" symbolic="YES" id="78r-kI-7WE"/>
                                     <constraint firstItem="HDj-ik-oPb" firstAttribute="leading" secondItem="aBI-XJ-Zgd" secondAttribute="leading" constant="20" symbolic="YES" id="871-Ye-3T9"/>
                                     <constraint firstAttribute="bottom" secondItem="O3x-rr-vVh" secondAttribute="bottom" constant="20" symbolic="YES" id="90P-on-QTz"/>
                                     <constraint firstAttribute="centerX" secondItem="2ze-bR-Hrr" secondAttribute="centerX" id="9N1-yE-FEp"/>
                                     <constraint firstItem="TWB-la-4Jm" firstAttribute="top" secondItem="YSn-6N-fOe" secondAttribute="bottom" constant="8" symbolic="YES" id="Caj-dj-cZu"/>
                                     <constraint firstItem="dzU-Ic-S7S" firstAttribute="top" secondItem="O3x-rr-vVh" secondAttribute="bottom" constant="8" symbolic="YES" id="CxV-SS-5WO"/>
-                                    <constraint firstItem="HDj-ik-oPb" firstAttribute="top" secondItem="b5Y-nm-M56" secondAttribute="bottom" priority="250" constant="8" symbolic="YES" id="E6Y-aX-rKB"/>
-                                    <constraint firstItem="HDj-ik-oPb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="b5Y-nm-M56" secondAttribute="bottom" constant="8" symbolic="YES" id="HaL-oT-vRa"/>
+                                    <constraint firstItem="F6K-Af-7mF" firstAttribute="top" secondItem="dzU-Ic-S7S" secondAttribute="bottom" constant="8" symbolic="YES" id="EId-S2-WfF"/>
                                     <constraint firstAttribute="bottom" secondItem="2ze-bR-Hrr" secondAttribute="bottom" constant="20" symbolic="YES" id="HlE-Kq-0W0"/>
                                     <constraint firstAttribute="trailing" secondItem="BGU-ia-RVn" secondAttribute="trailing" constant="20" symbolic="YES" id="KnC-Hp-xYh"/>
                                     <constraint firstAttribute="trailing" secondItem="YSn-6N-fOe" secondAttribute="trailing" constant="20" symbolic="YES" id="Kp3-HL-sXb"/>
                                     <constraint firstItem="dzU-Ic-S7S" firstAttribute="leading" secondItem="aBI-XJ-Zgd" secondAttribute="leading" constant="20" symbolic="YES" id="Kzs-Xp-9I3"/>
+                                    <constraint firstAttribute="trailing" secondItem="F6K-Af-7mF" secondAttribute="trailing" constant="20" symbolic="YES" id="LQi-bD-kfp"/>
+                                    <constraint firstItem="HDj-ik-oPb" firstAttribute="top" secondItem="F6K-Af-7mF" secondAttribute="bottom" priority="250" constant="8" symbolic="YES" id="N0A-SR-Lcs"/>
                                     <constraint firstItem="O3x-rr-vVh" firstAttribute="leading" secondItem="aBI-XJ-Zgd" secondAttribute="leading" constant="20" symbolic="YES" id="PGk-pr-U0R"/>
                                     <constraint firstAttribute="trailing" secondItem="HDj-ik-oPb" secondAttribute="trailing" constant="20" symbolic="YES" id="Qgw-gl-LxK"/>
                                     <constraint firstItem="2ze-bR-Hrr" firstAttribute="top" secondItem="BGU-ia-RVn" secondAttribute="bottom" constant="8" symbolic="YES" id="RHN-4g-6Gz"/>
@@ -552,16 +667,14 @@ Once I have finished building my final amplifier I am hoping to look in to build
                                     <constraint firstItem="YSn-6N-fOe" firstAttribute="leading" secondItem="aBI-XJ-Zgd" secondAttribute="leading" constant="20" symbolic="YES" id="he3-Ci-sMT"/>
                                     <constraint firstItem="LpG-js-nmJ" firstAttribute="top" secondItem="dzU-Ic-S7S" secondAttribute="bottom" constant="8" symbolic="YES" id="jK3-V8-qkp"/>
                                     <constraint firstItem="BGU-ia-RVn" firstAttribute="leading" secondItem="aBI-XJ-Zgd" secondAttribute="leading" constant="20" symbolic="YES" id="jma-X9-WGe"/>
-                                    <constraint firstItem="b5Y-nm-M56" firstAttribute="leading" secondItem="aBI-XJ-Zgd" secondAttribute="leading" constant="20" symbolic="YES" id="oCz-eR-Re0"/>
+                                    <constraint firstItem="HDj-ik-oPb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="F6K-Af-7mF" secondAttribute="bottom" constant="8" symbolic="YES" id="kn6-mU-ZXc"/>
                                     <constraint firstItem="VQ3-u3-LIb" firstAttribute="top" secondItem="2ze-bR-Hrr" secondAttribute="bottom" constant="8" symbolic="YES" id="pCE-Vn-d19"/>
                                     <constraint firstAttribute="trailing" secondItem="O3x-rr-vVh" secondAttribute="trailing" constant="20" symbolic="YES" id="qsl-Hg-Sy6"/>
                                     <constraint firstAttribute="trailing" secondItem="TWB-la-4Jm" secondAttribute="trailing" constant="20" symbolic="YES" id="r7l-Mu-5zU"/>
-                                    <constraint firstItem="b5Y-nm-M56" firstAttribute="top" secondItem="dzU-Ic-S7S" secondAttribute="bottom" constant="8" symbolic="YES" id="tii-6N-PJ6"/>
                                     <constraint firstItem="BGU-ia-RVn" firstAttribute="top" secondItem="TWB-la-4Jm" secondAttribute="bottom" constant="8" symbolic="YES" id="toD-kh-dSt"/>
                                     <constraint firstItem="2ze-bR-Hrr" firstAttribute="width" secondItem="VQ3-u3-LIb" secondAttribute="width" id="u6O-Kx-F8C"/>
                                     <constraint firstItem="HDj-ik-oPb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="i0K-ZT-d8K" secondAttribute="bottom" constant="8" symbolic="YES" id="v4M-Rg-OM5"/>
                                     <constraint firstItem="2ze-bR-Hrr" firstAttribute="leading" secondItem="VQ3-u3-LIb" secondAttribute="leading" id="vYP-go-q7p"/>
-                                    <constraint firstItem="LpG-js-nmJ" firstAttribute="leading" secondItem="b5Y-nm-M56" secondAttribute="trailing" constant="8" symbolic="YES" id="xlh-F2-tqC"/>
                                     <constraint firstItem="O3x-rr-vVh" firstAttribute="top" secondItem="aBI-XJ-Zgd" secondAttribute="top" constant="20" symbolic="YES" id="z1u-K2-v5f"/>
                                     <constraint firstItem="TWB-la-4Jm" firstAttribute="leading" secondItem="aBI-XJ-Zgd" secondAttribute="leading" constant="20" symbolic="YES" id="zwY-zh-v2E"/>
                                 </constraints>
@@ -588,16 +701,19 @@ Once I have finished building my final amplifier I am hoping to look in to build
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1400"/>
                     <connections>
+                        <outlet property="musicImageView" destination="LpG-js-nmJ" id="TTx-NJ-M6b"/>
+                        <outlet property="musicImageViewCaption" destination="i0K-ZT-d8K" id="HTh-o3-Zce"/>
+                        <outlet property="musicTextField" destination="F6K-Af-7mF" id="pFO-jM-J8k"/>
                         <outlet property="scrollView" destination="aBI-XJ-Zgd" id="J4h-DP-Gp7"/>
                         <outletCollection property="labels" destination="O3x-rr-vVh" collectionClass="NSMutableArray" id="Va3-ge-KO0"/>
                         <outletCollection property="labels" destination="dzU-Ic-S7S" collectionClass="NSMutableArray" id="o5y-b8-5OS"/>
-                        <outletCollection property="labels" destination="b5Y-nm-M56" collectionClass="NSMutableArray" id="OBp-ww-1dy"/>
                         <outletCollection property="labels" destination="i0K-ZT-d8K" collectionClass="NSMutableArray" id="2tC-ik-pHL"/>
                         <outletCollection property="labels" destination="HDj-ik-oPb" collectionClass="NSMutableArray" id="EzW-34-4Uu"/>
                         <outletCollection property="labels" destination="YSn-6N-fOe" collectionClass="NSMutableArray" id="J2w-h8-XaO"/>
                         <outletCollection property="labels" destination="TWB-la-4Jm" collectionClass="NSMutableArray" id="McD-dv-RMf"/>
                         <outletCollection property="labels" destination="BGU-ia-RVn" collectionClass="NSMutableArray" id="OBX-34-gsS"/>
                         <outletCollection property="labels" destination="VQ3-u3-LIb" collectionClass="NSMutableArray" id="qpV-NR-OD9"/>
+                        <outletCollection property="textViews" destination="F6K-Af-7mF" collectionClass="NSMutableArray" id="Rs4-16-pGP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fOv-qN-0Hn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -656,7 +772,7 @@ Once I have finished building my final amplifier I am hoping to look in to build
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FA3-PP-yEi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2310" y="1334"/>
+            <point key="canvasLocation" x="2310" y="1520"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="z3f-wu-2LM">
@@ -804,7 +920,7 @@ Hitting all of these targets was no easy feat,</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y0O-Sa-7aY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3122" y="2206"/>
+            <point key="canvasLocation" x="3122" y="2858"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IfO-KQ-o8y">
@@ -822,7 +938,7 @@ Hitting all of these targets was no easy feat,</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wrG-5h-joM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2310" y="2206"/>
+            <point key="canvasLocation" x="2310" y="2858"/>
         </scene>
         <!--About Me-->
         <scene sceneID="EvZ-Rg-HI1">
@@ -954,10 +1070,12 @@ Hitting all of these targets was no easy feat,</string>
         </scene>
     </scenes>
     <resources>
+        <image name="Clever4 Logo" width="128" height="128"/>
         <image name="Four Sqaures App Icon" width="256" height="256"/>
         <image name="Gathered App Icon" width="256" height="256"/>
         <image name="Humber Bridge Panorama.jpg" width="2048" height="594"/>
         <image name="Photo of Me.jpg" width="768" height="768"/>
         <image name="Records On Wall.jpg" width="1509" height="1505"/>
+        <image name="Yetii Logo" width="128" height="128"/>
     </resources>
 </document>
