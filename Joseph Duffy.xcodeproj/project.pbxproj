@@ -10,7 +10,6 @@
 		D9822C941AE584CD00A1E988 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9822C931AE584CD00A1E988 /* AppDelegate.swift */; };
 		D9822C991AE584CD00A1E988 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9822C971AE584CD00A1E988 /* Main.storyboard */; };
 		D9822C9B1AE584CD00A1E988 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9822C9A1AE584CD00A1E988 /* Images.xcassets */; };
-		D9822C9E1AE584CD00A1E988 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9822C9C1AE584CD00A1E988 /* LaunchScreen.xib */; };
 		D9822CAA1AE584CD00A1E988 /* Joseph_DuffyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9822CA91AE584CD00A1E988 /* Joseph_DuffyTests.swift */; };
 		D9822CB51AE5860800A1E988 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9822CB41AE5860800A1E988 /* AboutMeViewController.swift */; };
 		D9822CB71AE5861000A1E988 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9822CB61AE5861000A1E988 /* AboutViewController.swift */; };
@@ -51,7 +50,6 @@
 		D9822C931AE584CD00A1E988 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9822C981AE584CD00A1E988 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9822C9A1AE584CD00A1E988 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		D9822C9D1AE584CD00A1E988 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D9822CA31AE584CD00A1E988 /* Joseph DuffyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Joseph DuffyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9822CA81AE584CD00A1E988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9822CA91AE584CD00A1E988 /* Joseph_DuffyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joseph_DuffyTests.swift; sourceTree = "<group>"; };
@@ -124,7 +122,6 @@
 				D9822C931AE584CD00A1E988 /* AppDelegate.swift */,
 				D9822C971AE584CD00A1E988 /* Main.storyboard */,
 				D9822C9A1AE584CD00A1E988 /* Images.xcassets */,
-				D9822C9C1AE584CD00A1E988 /* LaunchScreen.xib */,
 				D9822C911AE584CD00A1E988 /* Supporting Files */,
 				D9822CBE1AE5AC1800A1E988 /* BlurStoryboardSegue.swift */,
 				D9822CC01AE6426B00A1E988 /* ZoomStoryboardSegue.swift */,
@@ -294,7 +291,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9822C991AE584CD00A1E988 /* Main.storyboard in Resources */,
-				D9822C9E1AE584CD00A1E988 /* LaunchScreen.xib in Resources */,
 				D9822CD91AE7CDCD00A1E988 /* Records On Wall.jpg in Resources */,
 				D9822C9B1AE584CD00A1E988 /* Images.xcassets in Resources */,
 				D9822CDD1AE7CDF200A1E988 /* Humber Bridge Panorama.jpg in Resources */,
@@ -362,14 +358,6 @@
 				D9822C981AE584CD00A1E988 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D9822C9C1AE584CD00A1E988 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D9822C9D1AE584CD00A1E988 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -462,6 +450,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "Joseph Duffy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -472,6 +461,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "Joseph Duffy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
