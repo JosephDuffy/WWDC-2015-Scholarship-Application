@@ -145,11 +145,10 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         self.collectionView?.collectionViewLayout.invalidateLayout()
     }
 
-    override func willRotateToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
-        super.willRotateToInterfaceOrientation(toInterfaceOrientation, duration: duration)
-        println("Will rototate")
-
-        self.collectionView?.collectionViewLayout.invalidateLayout()
-    }
+//    override func willRotateToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
+//        super.willRotateToInterfaceOrientation(toInterfaceOrientation, duration: duration)
+//
+//        self.collectionView?.collectionViewLayout.invalidateLayout()
+//    }
 
 }

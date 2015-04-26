@@ -55,12 +55,10 @@ class ContainerViewController: UIViewController, UIScrollViewDelegate {
                 self.containerView.addSubview(rootViewController.view)
 
                 viewControllers.append(rootViewController)
-//                views.append(rootViewController.view)
             }
 
             self.sectionViewControllers = viewControllers
 
-//            self.scollView.setup(views)
             self.sectionIndexToShow = self.indexToShow
             self.sectionsNeedResizing = true
             self.scollView.delegate = self
@@ -100,8 +98,6 @@ class ContainerViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLayoutSubviews()
         
         if let sectionViewControllers = self.sectionViewControllers where self.sectionsNeedResizing {
-            println("Laying out subviews")
-
             let dimensions = self.scollView.getDimensions()
 
             if sectionViewControllers.count > 2 && dimensions.isLandscape {
@@ -256,64 +252,12 @@ class ContainerViewController: UIViewController, UIScrollViewDelegate {
             return CGPointZero
         }
     }
-
-
-//    override func viewDidAppear(animated: Bool) {
-//        super.viewDidAppear(animated)
-
-//        if self.scollView.zoomScale != 1 {
-//            self.scollView.bounces = true
-//            self.scollView.setZoomScale(1, animated: true)
-//            self.scollView.bounces = false
-//        }
-
-
-//        self.scollView.setZoomScale(1, animated: false)
-//
-//        // Enable bounces so the zoom will go outside of the overall view
-//        self.scollView.bounces = true
-//        UIView.animateWithDuration(1, animations: { () -> Void in
-//            self.scollView.setZoomScale(self.scollView.minimumZoomScale, animated: false)
-//        }) { (com) -> Void in
-//            if com {
-//                UIView.animateWithDuration(1, animations: { () -> Void in
-//                    self.scollView.setZoomScale(1, animated: false)
-//                    }, completion: { (completed) -> Void in
-//                        if completed {
-//                            self.scollView.bounces = false
-//                        }
-//                })
-//            }
-//        }
-//    }
-
     override func shouldAutorotate() -> Bool {
         return false
     }
-
-//    override func willRotateToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
-//        super.willRotateToInterfaceOrientation(toInterfaceOrientation, duration: duration)
-//
-//        self.scollView.sectionsNeedResizing = true
-//    }
-//
-//    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
-//        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
-//
-//        self.scollView.sectionsNeedResizing = true
-//    }
-
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
-
-//    override func supportedInterfaceOrientations() -> Int {
-//        if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
-//            return Int(UIInterfaceOrientationMask.LandscapeLeft.rawValue | UIInterfaceOrientationMask.LandscapeRight.rawValue)
-//        } else {
-//            return Int(UIInterfaceOrientationMask.Portrait.rawValue)
-//        }
-//    }
 
     // MARK: Zooming
 
