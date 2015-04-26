@@ -69,19 +69,7 @@ class SectionViewController: UIViewController {
         if let textViews = self.textViews {
             for textView in textViews {
                 let textContainerInset = textView.textContainerInset
-//                textView.textContainerInset = UIEdgeInsets(top: textContainerInset.top, left: -4, bottom: textContainerInset.bottom, right: -4)
-//                textView.textContainerInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
-//                textView.textContainerInset = UIEdgeInsets(top: 0, left: -4, bottom: 0, right: -4)
-                textView.textContainerInset = UIEdgeInsetsZero
-
-                let contentInset = textView.contentInset
-//                textView.contentInset = UIEdgeInsets(top: contentInset.top, left: 0, bottom: contentInset.bottom, right: 0)
-//                textView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-                textView.contentInset = UIEdgeInsetsZero
-
-                textView.textContainer.lineBreakMode = NSLineBreakMode.ByWordWrapping
-
-//                textView.lin
+                textView.textContainerInset = UIEdgeInsets(top: 0, left: textContainerInset.left, bottom: 0, right: textContainerInset.right)
             }
         }
     }

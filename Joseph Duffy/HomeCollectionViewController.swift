@@ -11,6 +11,17 @@ import UIKit
 let reuseIdentifier = "Cell"
 
 class HomeCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+    struct ImageViewCurveFunctionToApply {
+        weak var imageView: UIImageView?
+        let function: ImageViewCurveFunction
+
+        init(imageView: UIImageView, function: ImageViewCurveFunction) {
+            self.imageView = imageView
+            self.function = function
+        }
+    }
+
+    private var imageViewCurveFunctions: [ImageViewCurveFunctionToApply] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,7 +88,8 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
             let homeIcon = section.homeIcon
             cell.imageView.image = homeIcon.image
             if let imageViewCurveFunction = homeIcon.imageViewCurveFunction {
-                imageViewCurveFunction(cell.imageView)
+                let imageViewCurveFunctionToApply = ImageViewCurveFunctionToApply(imageView: cell.imageView, function: imageViewCurveFunction)
+                self.imageViewCurveFunctions.append(imageViewCurveFunctionToApply)
             }
 
             if let textColor = section.textColor {
@@ -112,6 +124,18 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         if let cell = self.collectionView(collectionView, cellForItemAtIndexPath: indexPath) as? HomeCollectionViewCell {
             self.selectedIndexPath = indexPath
             self.performSegueWithIdentifier("showSegment", sender: cell.imageView)
+        }
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        for (index, imageViewCurveFunctionToApply) in enumerate(self.imageViewCurveFunctions) {
+            if let imageView = imageViewCurveFunctionToApply.imageView {
+                imageViewCurveFunctionToApply.function(imageView)
+            } else {
+                self.imageViewCurveFunctions.removeAtIndex(index)
+            }
         }
     }
 

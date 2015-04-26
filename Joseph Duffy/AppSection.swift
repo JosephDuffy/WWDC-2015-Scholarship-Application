@@ -8,6 +8,9 @@
 
 import UIKit
 
+typealias ImageViewCurveFunction = (UIImageView) -> Void
+typealias HomeIcon = (image: UIImage?, imageViewCurveFunction: ImageViewCurveFunction?)
+
 enum AppSection: Int {
     case About
     case Work
@@ -47,15 +50,13 @@ enum AppSection: Int {
     var mainColor: UIColor {
         switch self {
         case .About:
-            return UIColor(red: 237/255, green: 200/255, blue: 59/255, alpha: 1)
-        case .Work:
             return UIColor(red: 45/255, green: 159/255, blue: 168/255, alpha: 1)
-//            return UIColor(red: 72/255, green: 145/255, blue: 90/255, alpha: 1)
+        case .Work:
+            return UIColor(red: 237/255, green: 200/255, blue: 59/255, alpha: 1)
         case .Gathered:
             return UIColor(red: 178/255, green: 0/255, blue: 11/255, alpha: 1)
         case .FourSquares:
             return UIColor(red: 72/255, green: 145/255, blue: 90/255, alpha: 1)
-//            return UIColor(red: 45/255, green: 159/255, blue: 168/255, alpha: 1)
         case .Hobbies:
             return UIColor(red: 68/255, green: 45/255, blue: 54/255, alpha: 1)
         case .Accessibility:
@@ -65,11 +66,11 @@ enum AppSection: Int {
 
     var textColor: UIColor? {
         switch self {
-        case .About:
+         case .Work:
             return UIColor(red: 41/255, green: 41/255, blue: 40/255, alpha: 1)
         case .Hobbies, .Gathered:
             return UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
-        case .Work, .FourSquares, .Accessibility:
+        case .About, .FourSquares, .Accessibility:
             return .whiteColor()
         default:
             return nil
@@ -88,13 +89,9 @@ enum AppSection: Int {
     var barTintColor: UIColor? {
         switch self {
         case .About:
-            return UIColor(red: 238/255, green: 205/255, blue: 78/255, alpha: 1)
-        case .Work:
-//            return UIColor(red: 90/255, green: 156/255, blue: 106/255, alpha: 1)
             return UIColor(red: 66/255, green: 168/255, blue: 176/255, alpha: 1)
-//        case .FourSquares:
-//            return UIColor(red: 90/255, green: 156/255, blue: 106/255, alpha: 1)
-//            return UIColor(red: 66/255, green: 168/255, blue: 176/255, alpha: 1)
+        case .Work:
+            return UIColor(red: 238/255, green: 205/255, blue: 78/255, alpha: 1)
         case .Hobbies:
             return UIColor(red: 86/255, green: 66/255, blue: 83/255, alpha: 1)
         case .Accessibility:
@@ -108,16 +105,10 @@ enum AppSection: Int {
         switch self {
         case .Accessibility:
             return UIColor(red: 0.42, green: 0.714, blue: 1, alpha: 1)
-//        case .FourSquares:
-//            return UIColor(red: 178/255, green: 0, blue: 11/255, alpha: 1)
-//            return UIColor.blackColor()
         default:
             return nil
         }
     }
-
-    typealias ImageViewCurveFunction = (UIImageView) -> Void
-    typealias HomeIcon = (image: UIImage?, imageViewCurveFunction: ImageViewCurveFunction?)
 
     var homeIcon: HomeIcon {
         get {

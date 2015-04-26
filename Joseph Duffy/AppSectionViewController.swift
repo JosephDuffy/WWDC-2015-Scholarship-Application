@@ -15,7 +15,7 @@ class AppSectionViewController: SectionViewController, SKStoreProductViewControl
     var appId: String? {
         didSet {
             if self.appId != nil {
-                let barButton = UIBarButtonItem(title: "App Store", style: .Bordered, target: self, action: "showStoreProductViewController")
+                let barButton = UIBarButtonItem(title: "App Store", style: .Plain, target: self, action: "showStoreProductViewController")
                 self.navigationItem.rightBarButtonItem = barButton
             } else {
                 self.navigationItem.rightBarButtonItem = nil
@@ -28,7 +28,7 @@ class AppSectionViewController: SectionViewController, SKStoreProductViewControl
     var websiteURL: NSURL? {
         didSet {
             if self.appId != nil {
-                let barButton = UIBarButtonItem(title: "Website", style: .Bordered, target: self, action: "openWebsite")
+                let barButton = UIBarButtonItem(title: "Website", style: .Plain, target: self, action: "openWebsite")
                 self.navigationItem.leftBarButtonItem = barButton
             } else {
                 self.navigationItem.leftBarButtonItem = nil
@@ -46,6 +46,11 @@ class AppSectionViewController: SectionViewController, SKStoreProductViewControl
     var storeProductTimeoutTimer: NSTimer?
     var storeProductLoadingCanceled = false
     private var viewInAppStoreBarButton: UIBarButtonItem?
+
+    deinit {
+        self.storeProductViewController = nil
+        self.storeProductTimeoutTimer?.invalidate()
+    }
 
     func showStoreProductViewController() {
         if let appId = self.appId {
@@ -86,7 +91,7 @@ class AppSectionViewController: SectionViewController, SKStoreProductViewControl
         }
     }
 
-    func timeOutStoreProductLoad(timer: NSTimer) {
+    func timeOutStoreProductLoad() {
         self.storeProductTimeoutTimer?.invalidate()
         self.storeProductTimeoutTimer = nil
         self.storeProductViewController = nil
@@ -94,6 +99,21 @@ class AppSectionViewController: SectionViewController, SKStoreProductViewControl
 
         self.navigationItem.rightBarButtonItem = self.viewInAppStoreBarButton
         self.viewInAppStoreBarButton = nil
+
+        let alertController = UIAlertController(title: "Store Timed Out", message: "Loading the app store timed out. Open directly?", preferredStyle: .Alert)
+        let openAction = UIAlertAction(title: "Yes", style: .Default) { (action) -> Void in
+            if let appId = self.appId, url = NSURL(string: "itms-apps://itunes.apple.com/app/id\(appId)") {
+                if UIApplication.sharedApplication().canOpenURL(url) {
+                    UIApplication.sharedApplication().openURL(url)
+                } else if let url = NSURL(string: "https://itunes.apple.com/app/id\(appId)") {
+                    UIApplication.sharedApplication().openURL(url)
+                }
+            }
+        }
+        let closeAction = UIAlertAction(title: "No", style: .Cancel, handler: nil)
+        alertController.addAction(closeAction)
+        alertController.addAction(openAction)
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
 
     func productViewControllerDidFinish(viewController: SKStoreProductViewController!) {
