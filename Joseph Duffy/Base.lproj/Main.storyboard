@@ -162,47 +162,48 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGl-CX-PEM">
-                                        <rect key="frame" x="20" y="48" width="560" height="83"/>
-                                        <string key="text">I am currently studying Software Engineering at the University of Huddersfield. I am not only loving my course, but also the extra work and research I have been able to do that are not part of the curriculum. So far, my efforts have yielded an average grade of 87%, something I am very proud of.</string>
+                                        <rect key="frame" x="20" y="48" width="560" height="146"/>
+                                        <string key="text">I am currently studying Software Engineering at the University of Huddersfield. I am not only loving my course, but also the extra work and research I have been able to do that are not part of the curriculum. So far, my efforts have yielded an average grade of 87%, something I am very proud of.
+I am currently completing an industrial placement at Clever4, which not only gives me real-world experience, but also contributes towards 25% of my degree.</string>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lU-B5-eTD">
-                                        <rect key="frame" x="20" y="139" width="560" height="20"/>
+                                        <rect key="frame" x="20" y="202" width="560" height="20"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8N-G3-AUj">
-                                        <rect key="frame" x="20" y="167" width="560" height="104"/>
-                                        <string key="text">During my career I have managed to get invaluable experience by working in the industry. After creating websites and an open-source CMS written in PHP, I got my first job as a Web Developer at WSI. After working there for a little over year, I left to work at Clever4 in order to complete an industrial placement as part of my degree.</string>
+                                        <rect key="frame" x="20" y="230" width="560" height="125"/>
+                                        <string key="text">After creating websites and an open-source CMS written in PHP, I got my first job as a Web Developer at WSI. By working in the industry I have managed to gain invaluable experience, such as working in a team and interacting with clients. After working at WSI for a little over year, I left to work at Clever4 in order to complete an industrial placement as part of my degree.</string>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yetii" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtb-mP-zjy">
-                                        <rect key="frame" x="20" y="562" width="560" height="20"/>
+                                        <rect key="frame" x="20" y="646" width="560" height="20"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clever4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLW-2Z-a8g">
-                                        <rect key="frame" x="20" y="279" width="560" height="20"/>
+                                        <rect key="frame" x="20" y="363" width="560" height="20"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZL-62-f59">
-                                        <rect key="frame" x="16" y="307" width="564" height="247"/>
-                                        <string key="text">I was initially hired as a C#.NET Web Developer at Clever4, but my love and knowledge of iOS development was known from the start. When the opportunity to create an iOS app arose we jumped on it, and I am now creating an iOS within Clever4: Curro.
+                                        <rect key="frame" x="16" y="391" width="564" height="247"/>
+                                        <mutableString key="text">I was initially hired as a C# .NET Web Developer at Clever4, but my love and knowledge of iOS development was known from the start. When the opportunity to create an iOS app arose we jumped on it, and I am now creating an iOS within Clever4: Curro.
 
-Curro is an activity monitor, aimed at making it easier for spectators, charities and event organisers to track the progress of fund raisers. I have really enjoyed creating Curro and hope to be continuing development while I am at University, hopefully implementing any new APIs that iOS 9 will have to offer and taking advantage of any new hardware that is released by Apple.</string>
+Curro is an activity monitor, aimed at making it easier for spectators, charities and event organisers to track the progress of people participating in various activities, such as fund raisers. I have really enjoyed creating Curro and hope to be continuing development while I am at University, hopefully implementing any new APIs that iOS 9 will have to offer and taking advantage of any new hardware that is released by Apple.</mutableString>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clever4 Logo" translatesAutoresizingMaskIntoConstraints="NO" id="3fq-DW-PYE">
-                                        <rect key="frame" x="452" y="307" width="128" height="128"/>
+                                        <rect key="frame" x="452" y="391" width="128" height="128"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="3fq-DW-PYE" secondAttribute="height" multiplier="1:1" id="LsM-GF-ork"/>
                                             <constraint firstAttribute="width" constant="128" id="p5R-1L-eBc"/>
@@ -215,26 +216,26 @@ Curro is an activity monitor, aimed at making it easier for spectators, charitie
                                         </variation>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clever4's Logo" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RzZ-eO-Qkz">
-                                        <rect key="frame" x="452" y="443" width="128" height="14"/>
+                                        <rect key="frame" x="452" y="527" width="128" height="14"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Atm-zX-FGU">
-                                        <rect key="frame" x="16" y="590" width="564" height="121"/>
+                                        <rect key="frame" x="16" y="674" width="564" height="121"/>
                                         <string key="text">Yetii is a company I founded in April 2014. I have released both of my personal iOS apps, Gathered and Four Squares, under the Yetii brand. I decided to create Yetii so that I could gain experience in how to create, build and maintain a small business, and also to have a more professional brand to release the apps I create under.</string>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Yetii Logo" translatesAutoresizingMaskIntoConstraints="NO" id="OYQ-QO-h79">
-                                        <rect key="frame" x="452" y="590" width="128" height="128"/>
+                                        <rect key="frame" x="452" y="674" width="128" height="128"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="128" id="2uy-Yx-vGO"/>
                                             <constraint firstAttribute="width" secondItem="OYQ-QO-h79" secondAttribute="height" multiplier="1:1" id="HEP-Rl-2wN"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yetii's Logo" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0PA-dg-qMI">
-                                        <rect key="frame" x="452" y="726" width="128" height="14"/>
+                                        <rect key="frame" x="452" y="810" width="128" height="14"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -345,42 +346,42 @@ Curro is an activity monitor, aimed at making it easier for spectators, charitie
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zH3-es-OnX">
-                                        <rect key="frame" x="20" y="284" width="560" height="167"/>
+                                        <rect key="frame" x="20" y="284" width="560" height="188"/>
                                         <string key="text">Four Squares is the latest iOS app I have released, and also supports the Apple Watch. So far, the reception has been very positive, and it has been very satisfying watching people's high scores being added to the Game Center leaderboards.
 
-In the next version, I am planning to release a new cooperative mode that will use Bonjour, achievements and any improvements that I feel need to be made to the WatchKit App, once I have received my Apple Watch.</string>
+In the next version, I am planning to release a new cooperative mode that will use Bonjour, Game Center achievements, and any improvements that I feel need to be made to the WatchKit App, once I have received my Apple Watch.</string>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple Watch" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0n-zq-34E">
-                                        <rect key="frame" x="20" y="459" width="560" height="20"/>
+                                        <rect key="frame" x="20" y="480" width="560" height="20"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1m-xH-rZy">
-                                        <rect key="frame" x="20" y="487" width="560" height="104"/>
+                                        <rect key="frame" x="20" y="508" width="560" height="104"/>
                                         <string key="text">The concept for Four Squares came not long after the announcement of the Apple Watch while having a discussion with some colleagues about ideas for how the Apple Watch could be used for recreation. Four Squares is a simple game that I have high hopes for working well when played on an Apple Watch.</string>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What I Learned" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ED-ze-22E">
-                                        <rect key="frame" x="20" y="599" width="560" height="20"/>
+                                        <rect key="frame" x="20" y="620" width="560" height="20"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owp-EK-IbS">
-                                        <rect key="frame" x="20" y="627" width="560" height="440"/>
-                                        <string key="text">As with Gathered, the main reason I created Four Squares was to learn. While working on Four Squares I have learned:
+                                        <rect key="frame" x="20" y="648" width="560" height="440"/>
+                                        <mutableString key="text">As with Gathered, the main reason I created Four Squares was to learn. While working on Four Squares I have learned:
 
-• UIView drawing - The 4 main buttons are drawn using a custom UIButton subclasses that draw the squares using UIBezierPaths, allowing me to not include any images for the game board and ensuring it'll work for all possible sizes.
+• UIView drawing - The 4 main buttons are drawn using custom UIButton subclasses that draw the squares using UIBezierPaths, allowing me to not include any images for the game board and ensuring it'll work for all possible sizes.
 
-• Accessibility - Although the game uses visuals to show a sequence, it also plays sounds. I wanted to ensure that when VoiceOver is enabled the game is still playable. For example, the buttons can be tapped directly without first being selected. I am working on improving the VoiceOver integration even further in future updates.
+• Accessibility - Although the game uses visuals to show a sequence, it also plays sounds. I wanted to ensure that when VoiceOver is enabled the game is still playable. For example, when VoiceOver is enabled, the main game buttons can still be tapped directly without first being selected. I am working on improving the VoiceOver integration even further in future updates.
 
-• Auto Layout and Size Classes - Although I felt comfortable with Auto Layout, I knew that I had more to learn, and my knowledge of Size Classes was really lacking. To try and build my knowledge in these areas I aimed to support both portrait and landscape orientations on iPhones and iPads, without compromising the gameplay. I am very happy with the results, and hope that user's enjoy the freedom of playing on whichever device and orientation they prefer.</string>
+• Auto Layout and Size Classes - Although I felt comfortable with Auto Layout, I knew that I had more to learn, and my knowledge of Size Classes was lacking. To try and build my knowledge in these areas I aimed to support both portrait and landscape orientations on iPhones and iPads, without compromising the gameplay. I am very happy with the results, and hope that user's enjoy the freedom of playing on whichever device and orientation they prefer.</mutableString>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -458,8 +459,7 @@ In the next version, I am planning to release a new cooperative mode that will u
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYc-ob-cB1">
                                         <rect key="frame" x="20" y="284" width="560" height="167"/>
-                                        <string key="text">Gathered is the first iOS app I have released. Gathered aggregates various data sources from the iOS device and presents them to the user.
-The aim of Gathered was to see an app all the way through: from creating a new Xcode project to releasing it on the App Store. I feel Gathered was the perfect app to do this, because along the way I learned a lot of new APIs, created an open-source UITableView-based framework and fully got to grips with Swift. Despite the number of downloads not being that impressive, I am very proud of what I have accomplished.</string>
+                                        <mutableString key="text">Gathered is the first iOS app I have released. Gathered aggregates various data sources from the iOS device and presents them to the user. The aim of creating Gathered was to see an app all the way through, from creating a new Xcode project to releasing it on the App Store. I feel Gathered was the perfect app to do this, because along the way I learned a lot of new APIs, created an open-source UITableView-based framework and fully got to grips with Swift. Despite the number of downloads not being that impressive, I am very proud of what I have accomplished.</mutableString>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -467,13 +467,6 @@ The aim of Gathered was to see an app all the way through: from creating a new X
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Performance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S01-zu-WxB">
                                         <rect key="frame" x="20" y="459" width="560" height="20"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57a-Hy-3fU">
-                                        <rect key="frame" x="20" y="487" width="560" height="146"/>
-                                        <string key="text">Due to Gathered nature, ensuring the code is efficient and easy to debug was integral to its success. Due to this I learned a lot about the performance of UITableViews, how they calculate their cell's heights and how to pass a high volume of messages between objects efficiently. This was a brilliant opportunity to learn how to use Instruments, so I did. Using Instruments I managed to track down a major performance issue I was having when performing UITableViewCell updates.</string>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -485,9 +478,16 @@ The aim of Gathered was to see an app all the way through: from creating a new X
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DoZ-7k-FJJ">
                                         <rect key="frame" x="20" y="669" width="560" height="230"/>
-                                        <string key="text">Although Gathered does not lend itself well to being used with VoiceOver enabled due to its high update frequency, I was able to research and implement Dynamic Type within Gathered. This research and work implementing is what eventually led to the Dynamic Controls framework I have since released, which brings automatic support for Dynamic Type to iOS 7.
+                                        <mutableString key="text">Although Gathered does not lend itself well to being used with VoiceOver enabled due to its high update frequency, I was able to research and implement Dynamic Type within Gathered. This research and work implementing is what eventually led to the Dynamic Controls framework I have since released, which, among other things, brings automatic support for Dynamic Type to iOS 7.
 
-For the next version of Gathered I have been looking in to making the app more VoiceOver friendly, such as adding an option to refresh manually, using the Magic Tap gesture to perform the manual refresh and adding an option to enable/disable automatically announcing updated values.</string>
+For the next version of Gathered I have been looking in to making the app more VoiceOver friendly, such as adding an option to refresh manually, using the Magic Tap gesture to perform the manual refresh, and adding an option to enable/disable automatically announcing updated values.</mutableString>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57a-Hy-3fU">
+                                        <rect key="frame" x="20" y="487" width="560" height="146"/>
+                                        <string key="text">Due to Gathered's nature, ensuring the code is efficient and easy to debug was integral to its success. Due to this I learned a lot about the performance of UITableViews, how they calculate their cell's heights and how to pass a high volume of messages between objects efficiently. This was a brilliant opportunity to learn how to use Instruments, so I did. Using Instruments I managed to track down a major performance issue I was having when performing UITableViewCell updates.</string>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -614,9 +614,9 @@ For the next version of Gathered I have been looking in to making the app more V
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSn-6N-fOe">
                                         <rect key="frame" x="20" y="399" width="560" height="188"/>
-                                        <string key="text">In a similar way to how I like to solve programming problems, creating electronics is another passion of mine. When I started my record collection I decided to also build my own amplifiers that would be used to listen to them. So far, I have built a power amp, pre-amp and I am in the process of building my final amplifier: a phono amp.
+                                        <mutableString key="text">In a similar way to how I love solving programming problems, creating electronics is another passion of mine. When I started my record collection I decided to also build my own amplifiers that would be used to listen to them. So far, I have built a power amp, pre-amp and I am in the process of building my final amplifier: a phono amp.
 
-Once I have finished building my final amplifier I am hoping to look in to building some smaller electronics, aimed at home automation, specifically for those living with a disability.</string>
+Once I have finished building my final amplifier I am hoping to look in to building some smaller electronics, aimed at home automation, specifically for those living with a disability.</mutableString>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -629,7 +629,7 @@ Once I have finished building my final amplifier I am hoping to look in to build
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGU-ia-RVn">
                                         <rect key="frame" x="20" y="623" width="560" height="125"/>
-                                        <string key="text">One aspect of hoping to attend WWDC is that it's set in San Francisco. Whenever I visit or move to a new city I love to explore everything the city has to offer, especially the scenery. The only thing better than listening to music or podcasts is listening while going on a walk. I currently live next to a large river, the river Humber, and enjoy walking along it and through the nearby forest.</string>
+                                        <string key="text">One aspect of hoping to attend WWDC is that it takes place in San Francisco. Whenever I visit or move to a new city I love to explore everything the city has to offer, especially the scenery. The only thing better than listening to music or podcasts is listening while going on a walk. I currently live next to a large river, the river Humber, and enjoy walking along it and through the nearby forest.</string>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -831,9 +831,9 @@ Once I have finished building my final amplifier I am hoping to look in to build
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPA-y9-yOE">
                                         <rect key="frame" x="20" y="20" width="560" height="230"/>
-                                        <string key="text">The most satisfying thing about creating software for me is when it helps someone. As part of this, whenever I create software I try to think about what problems it could solve and who might benefit from it. I feel very strongly that the products I release should be accessible by everyone, including those using assistive technologies
+                                        <mutableString key="text">The most satisfying thing about creating software for me is when it helps someone. As part of this, whenever I create software I try to think about what problems it could solve and who might benefit from it. As part of this I feel very strongly that the products I release should be accessible by everyone, including those using assistive technologies
 
-As part of my efforts to ensure that my software is helpful to everyone I have spent a lot of time researching and implementing proper accessibility standards. Two good examples of this are my open-source iOS framework, Dynamic Controls, and a project I worked on at Clever4: a timetable for the local bus company.</string>
+During my efforts to ensure that my software is helpful to everyone I have spent a lot of time researching and implementing proper accessibility standards. Two good examples of this are my open-source iOS framework, Dynamic Controls, and a project I worked on at Clever4: a timetable for the local bus company.</mutableString>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -990,26 +990,26 @@ Hitting all of these targets was no easy feat, but along the way I learned a lot
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where I Started" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UqQ-n0-nnw">
-                                        <rect key="frame" x="20" y="641" width="560" height="20"/>
+                                        <rect key="frame" x="20" y="620" width="560" height="20"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqs-qH-AVO">
-                                        <rect key="frame" x="20" y="669" width="560" height="125"/>
+                                        <rect key="frame" x="20" y="648" width="560" height="125"/>
                                         <string key="text">My very first program was created to try and avoid the long download times for extra textures when connecting to a Counter Strike: Source server I rented with some friends. The program was very simple, and only unzipped and moved some files to a specific directory on the user's computer. It wasn't much, and was only really used by me and my friends, but it started my love for creating things that solve problems.</string>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Web Localiser" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8Y-K0-3O8">
-                                        <rect key="frame" x="20" y="802" width="560" height="20"/>
+                                        <rect key="frame" x="20" y="781" width="560" height="20"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jg8-hV-zzZ">
-                                        <rect key="frame" x="20" y="830" width="560" height="104"/>
+                                        <rect key="frame" x="20" y="809" width="560" height="104"/>
                                         <string key="text">Web Localiser was my first publicly-released piece of software. Web Localiser provided a button in Safari's toolbar to quickly switch between TLDs, such as .com and .co.uk. It wasn't huge, but it got a substantial number of downloads and gave me a taste of what it's like to release software that genuinely helped people.</string>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1022,10 +1022,10 @@ Hitting all of these targets was no easy feat, but along the way I learned a lot
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="om4-Tg-Krl">
-                                        <rect key="frame" x="20" y="382" width="560" height="251"/>
-                                        <string key="text">The idea behind this app was to try and create a new way of laying out an app and providing a unique way of navigating through the content. The first screen, the menu, gives an overview of the content within the app and how each section is spatially related. This menu can be returned to by either pinching the screen or performing the Magic Tap gesture with VoiceOver enabled.
+                                        <rect key="frame" x="20" y="382" width="560" height="230"/>
+                                        <mutableString key="text">The idea behind this app was to try and create a new way of laying out an app and providing a unique way of navigating through the content. The first screen, the menu, gives an overview of the content within the app and how each section is spatially related. This menu can be returned to by either pinching the screen or performing the Magic Tap gesture with VoiceOver enabled.
 
-Due to the navigation within the app being unorthodox, I have also tried to offer an alternate way of navigating the app; tapping on the edge of the screen will also move between each of the sections within the app. If I were to work further on this app in the future I would focus on improving the VoiceOver integration.</string>
+Due to the navigation within the app being unorthodox, I have also tried to offer multiple ways of navigating the app. For example, both tapping on the edge of the screen and swipping the screen will move between each of the sections within the app.</mutableString>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
