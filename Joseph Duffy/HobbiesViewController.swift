@@ -21,6 +21,8 @@ class HobbiesViewController: SectionViewController {
             self.musicImageViewCaption
             ], toExclusionZoneOfTextView: self.musicTextField)
 
-        self.view.layoutSubviews()
+        if !UIDevice.currentDevice().isiOS8OrAbove {
+            self.view.layoutSubviews()
+        }
     }
 }

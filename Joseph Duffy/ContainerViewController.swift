@@ -75,7 +75,6 @@ class ContainerViewController: UIViewController, UIScrollViewDelegate {
             // Calculate rows and columns
             self.view.setNeedsLayout()
             self.view.layoutIfNeeded()
-            self.view.layoutSubviews()
 
             self.scollView.minimumZoomScale = 0.4
 
@@ -205,7 +204,9 @@ class ContainerViewController: UIViewController, UIScrollViewDelegate {
 
             self.sectionsNeedResizing = false
 
-            self.view.layoutSubviews()
+            if !UIDevice.currentDevice().isiOS8OrAbove {
+                self.view.layoutSubviews()
+            }
         }
     }
 

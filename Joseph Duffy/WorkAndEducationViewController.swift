@@ -30,6 +30,8 @@ class WorkAndEducationViewController: SectionViewController {
             self.yetiiImageViewCaption
             ], toExclusionZoneOfTextView: self.yetiiTextView)
 
-        self.view.layoutSubviews()
+        if !UIDevice.currentDevice().isiOS8OrAbove {
+            self.view.layoutSubviews()
+        }
     }
 }

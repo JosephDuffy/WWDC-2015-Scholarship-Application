@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D90109CB1AED54F500209EB7 /* UIDevice+isiOS8OrAbove.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90109CA1AED54F500209EB7 /* UIDevice+isiOS8OrAbove.swift */; };
 		D9822C941AE584CD00A1E988 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9822C931AE584CD00A1E988 /* AppDelegate.swift */; };
 		D9822C991AE584CD00A1E988 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9822C971AE584CD00A1E988 /* Main.storyboard */; };
 		D9822C9B1AE584CD00A1E988 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9822C9A1AE584CD00A1E988 /* Images.xcassets */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D90109CA1AED54F500209EB7 /* UIDevice+isiOS8OrAbove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+isiOS8OrAbove.swift"; sourceTree = "<group>"; };
 		D9822C8E1AE584CD00A1E988 /* Joseph Duffy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Joseph Duffy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9822C921AE584CD00A1E988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9822C931AE584CD00A1E988 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,7 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				D9822CD51AE7C65900A1E988 /* Photos */,
-				D9822CCA1AE66AE900A1E988 /* View */,
+				D9822CCA1AE66AE900A1E988 /* Extensions */,
 				D9822CB31AE585FC00A1E988 /* Controllers */,
 				D9822C931AE584CD00A1E988 /* AppDelegate.swift */,
 				D9822C971AE584CD00A1E988 /* Main.storyboard */,
@@ -191,12 +193,13 @@
 			name = Sections;
 			sourceTree = "<group>";
 		};
-		D9822CCA1AE66AE900A1E988 /* View */ = {
+		D9822CCA1AE66AE900A1E988 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				D9F79E0A1AE8266500072862 /* UIView+Dimensions.swift */,
+				D90109CA1AED54F500209EB7 /* UIDevice+isiOS8OrAbove.swift */,
 			);
-			name = View;
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		D9822CD51AE7C65900A1E988 /* Photos */ = {
@@ -336,6 +339,7 @@
 				D9F79E0F1AEBC50800072862 /* HobbiesViewController.swift in Sources */,
 				D988E10F1AE81750009726FB /* AccessibilitySectionViewController.swift in Sources */,
 				D9F79E0B1AE8266500072862 /* UIView+Dimensions.swift in Sources */,
+				D90109CB1AED54F500209EB7 /* UIDevice+isiOS8OrAbove.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,7 +409,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -444,7 +448,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

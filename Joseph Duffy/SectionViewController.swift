@@ -91,7 +91,9 @@ class SectionViewController: UIViewController {
             }
         }
 
-        self.view.layoutSubviews()
+        if !UIDevice.currentDevice().isiOS8OrAbove {
+            self.view.layoutSubviews()
+        }
     }
 
     /**
@@ -124,6 +126,7 @@ class SectionViewController: UIViewController {
                 exclusionPaths.append(exclusionPath)
             }
 
+            textView.layoutManager.allowsNonContiguousLayout = false
             textView.textContainer.exclusionPaths = exclusionPaths
 
             self.updateFrameForTextView(textView)
@@ -136,12 +139,23 @@ class SectionViewController: UIViewController {
 
     func updateFrameForTextView(textView: UITextView) {
         if let layoutManager = textView.textContainer.layoutManager {
+            // On iOS 7, using layoutManager.usedRectForTextContainer: returned 0, so this is temp
+            // hack to get around any issues that could arise
+            let startingHeight = textView.frame.height
+
             textView.textContainer.size = CGSize(width: textView.textContainer.size.width, height: CGFloat.max)
 
             let contentInset = textView.contentInset
             let textContainerInset = textView.textContainerInset
 
-            let height = layoutManager.usedRectForTextContainer(textView.textContainer).size.height + contentInset.top + textContainerInset.top + contentInset.bottom + textContainerInset.bottom
+            let calculateHeight = layoutManager.usedRectForTextContainer(textView.textContainer).size.height
+            let height: CGFloat
+
+            if calculateHeight > 0 {
+                height = calculateHeight + contentInset.top + textContainerInset.top + contentInset.bottom + textContainerInset.bottom
+            } else {
+                height = startingHeight
+            }
 
             let constraintToReturn: NSLayoutConstraint
 
