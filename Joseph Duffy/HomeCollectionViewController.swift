@@ -76,9 +76,8 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
             
             let homeIcon = section.homeIcon
             cell.imageView.image = homeIcon.image
-            if homeIcon.applyAppIconCurve {
-                cell.imageView.layer.masksToBounds = true
-                cell.imageView.layer.cornerRadius = cell.imageView.frame.size.width/5
+            if let imageViewCurveFunction = homeIcon.imageViewCurveFunction {
+                imageViewCurveFunction(cell.imageView)
             }
 
             if let textColor = section.textColor {

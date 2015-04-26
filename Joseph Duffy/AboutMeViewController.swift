@@ -1,5 +1,5 @@
 //
-//  IntroViewController.swift
+//  AboutMeViewController.swift
 //  Joseph Duffy
 //
 //  Created by Joseph Duffy on 20/04/2015.
@@ -8,11 +8,14 @@
 
 import UIKit
 
-class IntroViewController: SectionViewController {
+class AboutMeViewController: SectionViewController {
+    @IBOutlet weak var photoOfMeImageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.photoOfMeImageView.layer.cornerRadius = self.photoOfMeImageView.frame.size.width / 2
+        self.photoOfMeImageView.clipsToBounds = true
         // Do any additional setup after loading the view.
     }
 

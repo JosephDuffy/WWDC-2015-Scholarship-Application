@@ -10,12 +10,6 @@ import UIKit
 
 class FourSquaresViewController: AppSectionViewController {
 
-    override var applyAppIconCurve: Bool {
-        get {
-            return false
-        }
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
 

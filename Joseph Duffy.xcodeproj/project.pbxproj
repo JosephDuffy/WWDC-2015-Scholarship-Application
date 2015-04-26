@@ -12,7 +12,7 @@
 		D9822C9B1AE584CD00A1E988 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9822C9A1AE584CD00A1E988 /* Images.xcassets */; };
 		D9822C9E1AE584CD00A1E988 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9822C9C1AE584CD00A1E988 /* LaunchScreen.xib */; };
 		D9822CAA1AE584CD00A1E988 /* Joseph_DuffyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9822CA91AE584CD00A1E988 /* Joseph_DuffyTests.swift */; };
-		D9822CB51AE5860800A1E988 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9822CB41AE5860800A1E988 /* IntroViewController.swift */; };
+		D9822CB51AE5860800A1E988 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9822CB41AE5860800A1E988 /* AboutMeViewController.swift */; };
 		D9822CB71AE5861000A1E988 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9822CB61AE5861000A1E988 /* AboutViewController.swift */; };
 		D9822CB91AE5867600A1E988 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9822CB81AE5867600A1E988 /* ContainerViewController.swift */; };
 		D9822CBF1AE5AC1800A1E988 /* BlurStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9822CBE1AE5AC1800A1E988 /* BlurStoryboardSegue.swift */; };
@@ -55,7 +55,7 @@
 		D9822CA31AE584CD00A1E988 /* Joseph DuffyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Joseph DuffyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9822CA81AE584CD00A1E988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9822CA91AE584CD00A1E988 /* Joseph_DuffyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joseph_DuffyTests.swift; sourceTree = "<group>"; };
-		D9822CB41AE5860800A1E988 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		D9822CB41AE5860800A1E988 /* AboutMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 		D9822CB61AE5861000A1E988 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		D9822CB81AE5867600A1E988 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		D9822CBE1AE5AC1800A1E988 /* BlurStoryboardSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurStoryboardSegue.swift; sourceTree = "<group>"; };
@@ -183,7 +183,7 @@
 			children = (
 				D9822CB81AE5867600A1E988 /* ContainerViewController.swift */,
 				D9822CCB1AE67E4600A1E988 /* SectionViewController.swift */,
-				D9822CB41AE5860800A1E988 /* IntroViewController.swift */,
+				D9822CB41AE5860800A1E988 /* AboutMeViewController.swift */,
 				D9822CD31AE6E04200A1E988 /* AppSectionViewController.swift */,
 				D9822CCD1AE6CFA900A1E988 /* GatheredViewController.swift */,
 				D9822CD11AE6DFCB00A1E988 /* FourSquaresViewController.swift */,
@@ -317,7 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9822CB51AE5860800A1E988 /* IntroViewController.swift in Sources */,
+				D9822CB51AE5860800A1E988 /* AboutMeViewController.swift in Sources */,
 				D9822CC61AE668CC00A1E988 /* HomeCollectionViewController.swift in Sources */,
 				D9822CBF1AE5AC1800A1E988 /* BlurStoryboardSegue.swift in Sources */,
 				D9822CD21AE6DFCB00A1E988 /* FourSquaresViewController.swift in Sources */,

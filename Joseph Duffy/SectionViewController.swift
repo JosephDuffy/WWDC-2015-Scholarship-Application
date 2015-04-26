@@ -12,11 +12,11 @@ class SectionViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView?
     /// Any labels that are part of the section's main content.
     /// These labels will have their text colour changed based on the section
-    @IBOutlet var labels: [UILabel]!
+    @IBOutlet var labels: [UILabel]?
 
     /// Any buttons that are part of the section's main content.
     /// Theses buttons will have their text colour changed based on the section
-    @IBOutlet var buttons: [UIButton]!
+    @IBOutlet var buttons: [UIButton]?
 
     @IBOutlet var textViews: [UITextView]?
 
@@ -28,12 +28,10 @@ class SectionViewController: UIViewController {
             self.view.backgroundColor = self.section.mainColor
 
             if let textColor = section.textColor {
-                self.navigationController?.navigationBar.titleTextAttributes = [
-                    NSForegroundColorAttributeName: textColor
-                ]
-
-                for label in self.labels {
-                    label.textColor = textColor
+                if let labels = self.labels {
+                    for label in labels {
+                        label.textColor = textColor
+                    }
                 }
 
                 if let textViews = self.textViews {
@@ -43,6 +41,12 @@ class SectionViewController: UIViewController {
                 }
             }
 
+            if let barTextColor = section.navigationBarTextColor {
+                self.navigationController?.navigationBar.titleTextAttributes = [
+                    NSForegroundColorAttributeName: barTextColor
+                ]
+            }
+
             if let barTintColor = section.barTintColor {
                 self.navigationController?.navigationBar.barTintColor = barTintColor
             }
@@ -50,8 +54,10 @@ class SectionViewController: UIViewController {
             if let tintColor = section.tintColor {
                 self.navigationController?.navigationBar.tintColor = tintColor
 
-                for button in self.buttons {
-                    button.tintColor = tintColor
+                if let buttons = self.buttons {
+                    for button in buttons {
+                        button.tintColor = tintColor
+                    }
                 }
             }
         }
@@ -65,6 +71,7 @@ class SectionViewController: UIViewController {
                 let textContainerInset = textView.textContainerInset
 //                textView.textContainerInset = UIEdgeInsets(top: textContainerInset.top, left: -4, bottom: textContainerInset.bottom, right: -4)
 //                textView.textContainerInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+//                textView.textContainerInset = UIEdgeInsets(top: 0, left: -4, bottom: 0, right: -4)
                 textView.textContainerInset = UIEdgeInsetsZero
 
                 let contentInset = textView.contentInset
@@ -99,12 +106,32 @@ class SectionViewController: UIViewController {
         self.view.layoutSubviews()
     }
 
+    /**
+    Calculates and sets the exclusion paths of the given UITextView to exclude the given
+    views. This meathod is fairly dumb, and assumes the all the views are directly below each other
+    and of the same width. This is because, in this application, this method is used to setup the 
+    exclusion of an image and its caption from a single text view.
+    
+    This method will then call the updateFrameForTextView: method, ensuring that the height
+    of the supplied UITextView is correct after the exclusion paths have been set
+    
+    :param: views An array of views to calculate the exclusion paths from
+    :param: textView The UITextView that the exclusion paths should be applied to
+    */
     func setViews(views: [UIView], toExclusionZoneOfTextView textView: UITextView) {
         if let scrollView = self.scrollView {
             var exclusionPaths = [UIBezierPath]()
+            var minWidth: CGFloat?
 
             for view in views {
-                let exclusionRect = scrollView.convertRect(view.frame, toView: textView)
+                var exclusionRect = scrollView.convertRect(view.frame, toView: textView)
+                if let minWidth = minWidth {
+                    if exclusionRect.size.width < minWidth {
+                        exclusionRect.size.width = minWidth
+                    }
+                }
+
+                minWidth = exclusionRect.size.width
                 let exclusionPath = UIBezierPath(rect: exclusionRect)
                 exclusionPaths.append(exclusionPath)
             }
@@ -115,64 +142,29 @@ class SectionViewController: UIViewController {
         }
     }
 
+    /// The NSLayoutContstraints to ensure the heights of the UITextViews are correct
+    /// These should only be set and updated within the updateFrameForTextView: method
     private var heightConstraintForTextView: [UITextView : NSLayoutConstraint] = [:]
 
     func updateFrameForTextView(textView: UITextView) {
-        //        textView.setNeedsLayout()
-        //        textView.layoutIfNeeded()
-
-//        println("==== Setting container size =====")
-//        println("Container size: \(textView.textContainer.size)")
-//        println("Frame: \(textView.frame)")
-
-        //        var textViewFrame = textView.frame
-        //        textViewFrame.size.height = max(textView.frame.size.height, textView.textContainer.size.height) + textView.contentInset.top + textView.contentInset.bottom
-        //        textView.frame = textViewFrame
-
-        textView.textContainer.size = CGSize(width: textView.textContainer.size.width, height: CGFloat.max)
-
-        //        textView.setNeedsLayout()
-        //        textView.layoutIfNeeded()
-
         if let layoutManager = textView.textContainer.layoutManager {
-//            layoutManager.glyphRangeForTextContainer(textView.textContainer)
-            let sillyExtraConstant: CGFloat = 10
+            textView.textContainer.size = CGSize(width: textView.textContainer.size.width, height: CGFloat.max)
 
             let contentInset = textView.contentInset
             let textContainerInset = textView.textContainerInset
 
-            let height = layoutManager.usedRectForTextContainer(textView.textContainer).size.height + textView.contentInset.top + textView.contentInset.bottom + sillyExtraConstant
-            let height2 = textView.frame.size.height + textView.contentInset.top + textView.contentInset.bottom + sillyExtraConstant
-            let height3 = max(layoutManager.usedRectForTextContainer(textView.textContainer).size.height, textView.frame.size.height) + textView.contentInset.top + textView.contentInset.bottom + sillyExtraConstant
-            let height4 = layoutManager.usedRectForTextContainer(textView.textContainer).size.height + contentInset.top + textContainerInset.top + contentInset.bottom + textContainerInset.bottom
-//            println("Height: \(height); height 2: \(height2); height 3: \(height3); height4: \(height4)")
-
-//            println("Calced height: \(height)")
+            let height = layoutManager.usedRectForTextContainer(textView.textContainer).size.height + contentInset.top + textContainerInset.top + contentInset.bottom + textContainerInset.bottom
 
             let constraintToReturn: NSLayoutConstraint
 
             if let heightLayoutConstraint = self.heightConstraintForTextView[textView] {
-                heightLayoutConstraint.constant = height4
+                heightLayoutConstraint.constant = height
             } else {
-                let constraint = NSLayoutConstraint(item: textView, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: height4)
+                let constraint = NSLayoutConstraint(item: textView, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: height)
                 textView.addConstraint(constraint)
 
                 self.heightConstraintForTextView[textView] = constraint
             }
-
-            textView.sizeToFit()
-
-            //            textView.setNeedsLayout()
-            //            textView.layoutIfNeeded()
-            //
-            //            textView.setNeedsUpdateConstraints()
-            //            textView.updateConstraintsIfNeeded()
-            //
-            //            textView.setNeedsLayout()
-            //            textView.layoutIfNeeded()
-            
-//            println("Frame after: \(textView.frame)")
-//            println("==== Finished Setting container size =====")
         }
     }
 

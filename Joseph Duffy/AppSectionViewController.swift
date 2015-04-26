@@ -11,11 +11,6 @@ import StoreKit
 
 class AppSectionViewController: SectionViewController, SKStoreProductViewControllerDelegate {
     @IBOutlet weak var appIconImageView: UIImageView!
-    var applyAppIconCurve: Bool {
-        get {
-            return true
-        }
-    }
 
     var appId: String? {
         didSet {
@@ -25,15 +20,6 @@ class AppSectionViewController: SectionViewController, SKStoreProductViewControl
             } else {
                 self.navigationItem.rightBarButtonItem = nil
             }
-        }
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        if applyAppIconCurve {
-            self.appIconImageView.layer.masksToBounds = true
-            self.appIconImageView.layer.cornerRadius = self.appIconImageView.frame.size.width/5
         }
     }
 

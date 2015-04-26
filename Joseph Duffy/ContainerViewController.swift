@@ -15,6 +15,7 @@ class ContainerViewController: UIViewController, UIScrollViewDelegate {
     var indexToShow: Int?
     // The index of the section to be shown when the next layout pass completes
     private(set) var sectionIndexToShow: Int?
+    private(set) var sectionViewControllerToShow: UIViewController?
 
     private var sectionViewControllers: [UIViewController]?
     var sectionsNeedResizing = false
@@ -81,6 +82,17 @@ class ContainerViewController: UIViewController, UIScrollViewDelegate {
             self.scollView.minimumZoomScale = 0.4
 
             UIApplication.sharedApplication().statusBarHidden = true
+        }
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+
+        if let sectionViewControllerToShow = self.sectionViewControllerToShow {
+            if let navigationBar = (sectionViewControllerToShow as? UINavigationController)?.navigationBar {
+                UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, navigationBar)
+            }
+            self.sectionViewControllerToShow = nil
         }
     }
 
@@ -186,6 +198,9 @@ class ContainerViewController: UIViewController, UIScrollViewDelegate {
             if let sectionIndexToShow = self.sectionIndexToShow {
                 self.scollView.contentOffset = self.offsetForIndex(sectionIndexToShow)
                 self.sectionIndexToShow = nil
+                if sectionViewControllers.count > sectionIndexToShow {
+                    self.sectionViewControllerToShow = sectionViewControllers[sectionIndexToShow]
+                }
             } else if self.scollView.contentOffset.x % dimensions.width != 0 || self.scollView.contentOffset.y % dimensions.height != 0 {
                 println("Offset was incorrect")
                 let correctContentOffset = self.offsetForIndex(self.currentIndex)

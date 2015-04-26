@@ -14,7 +14,7 @@ enum AppSection: Int {
     case Gathered
     case FourSquares
     case Hobbies
-    case Accessiblity
+    case Accessibility
 
     static var allAppSections: [AppSection] = [
         .About,
@@ -22,7 +22,7 @@ enum AppSection: Int {
         .Gathered,
         .FourSquares,
         .Hobbies,
-        .Accessiblity
+        .Accessibility
     ]
 
     var name: String {
@@ -38,8 +38,8 @@ enum AppSection: Int {
                 return "Four Squares"
             case .Hobbies:
                 return "Hobbies"
-            case .Accessiblity:
-                return "Accessiblity"
+            case .Accessibility:
+                return "Accessibility"
             }
         }
     }
@@ -49,14 +49,16 @@ enum AppSection: Int {
         case .About:
             return UIColor(red: 237/255, green: 200/255, blue: 59/255, alpha: 1)
         case .Work:
-            return UIColor(red: 47/255, green: 174/255, blue: 164/255, alpha: 1)
+            return UIColor(red: 45/255, green: 159/255, blue: 168/255, alpha: 1)
+//            return UIColor(red: 72/255, green: 145/255, blue: 90/255, alpha: 1)
         case .Gathered:
-            return UIColor(red:251/255, green:78/255, blue:67/255, alpha: 1)
+            return UIColor(red: 178/255, green: 0/255, blue: 11/255, alpha: 1)
         case .FourSquares:
-            return UIColor(red:0.922, green:0.408, blue:0.408, alpha: 1)
+            return UIColor(red: 72/255, green: 145/255, blue: 90/255, alpha: 1)
+//            return UIColor(red: 45/255, green: 159/255, blue: 168/255, alpha: 1)
         case .Hobbies:
-            return UIColor(red: 123/255, green: 3/255, blue: 1, alpha: 1)
-        case .Accessiblity:
+            return UIColor(red: 68/255, green: 45/255, blue: 54/255, alpha: 1)
+        case .Accessibility:
             return .darkGrayColor()
         }
     }
@@ -65,8 +67,19 @@ enum AppSection: Int {
         switch self {
         case .About:
             return UIColor(red: 41/255, green: 41/255, blue: 40/255, alpha: 1)
-        case .Hobbies, .Accessiblity:
+        case .Hobbies, .Gathered:
+            return UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
+        case .Work, .FourSquares, .Accessibility:
             return .whiteColor()
+        default:
+            return nil
+        }
+    }
+
+    var navigationBarTextColor: UIColor? {
+        switch self {
+        case .About, .Hobbies, .Work, .Accessibility:
+            return self.textColor
         default:
             return nil
         }
@@ -74,9 +87,17 @@ enum AppSection: Int {
 
     var barTintColor: UIColor? {
         switch self {
+        case .About:
+            return UIColor(red: 238/255, green: 205/255, blue: 78/255, alpha: 1)
+        case .Work:
+//            return UIColor(red: 90/255, green: 156/255, blue: 106/255, alpha: 1)
+            return UIColor(red: 66/255, green: 168/255, blue: 176/255, alpha: 1)
+//        case .FourSquares:
+//            return UIColor(red: 90/255, green: 156/255, blue: 106/255, alpha: 1)
+//            return UIColor(red: 66/255, green: 168/255, blue: 176/255, alpha: 1)
         case .Hobbies:
-            return UIColor(red: 222/255, green: 206/255, blue: 252/255, alpha: 1)
-        case .Accessiblity:
+            return UIColor(red: 86/255, green: 66/255, blue: 83/255, alpha: 1)
+        case .Accessibility:
             return .grayColor()
         default:
             return nil
@@ -85,29 +106,40 @@ enum AppSection: Int {
 
     var tintColor: UIColor? {
         switch self {
-        case .Accessiblity:
+        case .Accessibility:
             return UIColor(red: 0.42, green: 0.714, blue: 1, alpha: 1)
+//        case .FourSquares:
+//            return UIColor(red: 178/255, green: 0, blue: 11/255, alpha: 1)
+//            return UIColor.blackColor()
         default:
             return nil
         }
     }
 
-    var homeIcon: (image: UIImage?, applyAppIconCurve: Bool) {
+    typealias ImageViewCurveFunction = (UIImageView) -> Void
+    typealias HomeIcon = (image: UIImage?, imageViewCurveFunction: ImageViewCurveFunction?)
+
+    var homeIcon: HomeIcon {
         get {
-            var homeIcon: (image: UIImage?, applyAppIconCurve: Bool) = (nil, false)
+            var homeIcon: HomeIcon = (nil, nil)
             switch self {
             case .About:
                 homeIcon.image = UIImage(named: "Photo of Me.jpg")
+                homeIcon.imageViewCurveFunction = { (imageView) -> Void in
+                    imageView.setNeedsLayout()
+                    imageView.layoutIfNeeded()
+                    imageView.layer.cornerRadius = imageView.frame.size.width / 2
+                    imageView.clipsToBounds = true
+                }
             case .Work:
                 homeIcon.image = UIImage(named: "Work and Education Home Image")
             case .Gathered:
                 homeIcon.image = UIImage(named: "Gathered Home Image")
-                homeIcon.applyAppIconCurve = true
             case .FourSquares:
                 homeIcon.image = UIImage(named: "Four Squares Home Image")
             case .Hobbies:
                 homeIcon.image = UIImage(named: "Beethoven Symphony No.9 Cover.jpg")
-            case .Accessiblity:
+            case .Accessibility:
                 homeIcon.image = UIImage(named: "Accessibility Home Icon")
             default:
                 break
@@ -130,8 +162,8 @@ enum AppSection: Int {
                 return "FourSquaresRootViewController"
             case .Hobbies:
                 return "HobbiesRootViewController"
-            case .Accessiblity:
-                return "AccessiblityRootViewController"
+            case .Accessibility:
+                return "AccessibilityRootViewController"
             }
         }
     }

@@ -3,27 +3,27 @@
     {
       "idiom" : "iphone",
       "scale" : "1x",
-      "filename" : "Icon-128.png"
+      "filename" : "Gathered Icon 128x128.png"
     },
     {
       "idiom" : "iphone",
       "scale" : "2x",
-      "filename" : "Icon-256.png"
+      "filename" : "Gathered Icon 256x256.png"
     },
     {
       "idiom" : "iphone",
       "scale" : "3x",
-      "filename" : "Icon-384.png"
+      "filename" : "Gathered Icon 384x384.png"
     },
     {
       "idiom" : "ipad",
       "scale" : "1x",
-      "filename" : "Icon-256-1.png"
+      "filename" : "Gathered Icon 256x256-1.png"
     },
     {
       "idiom" : "ipad",
       "scale" : "2x",
-      "filename" : "Icon-512.png"
+      "filename" : "Gathered Icon 512x512.png"
     }
   ],
   "info" : {
